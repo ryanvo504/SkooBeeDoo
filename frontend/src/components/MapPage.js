@@ -73,16 +73,6 @@ const createMarkerIcon = (isSelected) => {
     shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
   });
   
-  // Custom component to handle map navigation
-  function MapNavigation({ center }) {
-    const map = useMapEvents({
-      'load': () => {
-        map.flyTo(center, 10);
-      }
-    });
-    return null;
-  }
-  
   function MapPage({ onReset }) {
     // Retrieve user data from localStorage
     const [userData, setUserData] = useState(null);
@@ -96,6 +86,16 @@ const createMarkerIcon = (isSelected) => {
     // State for selected city
     const [selectedCity, setSelectedCity] = useState('');
   
+    // Custom component to handle map navigation
+    function MapNavigation({ center }) {
+      const map = useMapEvents({
+        'load': () => {
+          map.flyTo(center, 6);
+        }
+      });
+      return null;
+    }
+  
     // Load user data on component mount
     useEffect(() => {
       const storedUserData = localStorage.getItem('userData');
@@ -103,8 +103,8 @@ const createMarkerIcon = (isSelected) => {
         setUserData(JSON.parse(storedUserData));
       }
   
-      // Default to New York City if no geolocation
-      setCurrentLocation({ lat: 40.7128, lng: -74.0060 });
+      // Default to geographical center of the US
+      setCurrentLocation({ lat: 39.8283, lng: -98.5795 });
     }, []);
   
     // Handle city selection
@@ -139,53 +139,53 @@ const createMarkerIcon = (isSelected) => {
     }
   
     return (
-      <div className="min-h-screen flex justify-center items-center bg-gray-100 p-4">
-        <div className="w-full max-w-4xl bg-white shadow-lg rounded-lg overflow-hidden">
-          <div className="p-4 bg-white shadow-md flex justify-between items-center">
-            <div>
-              <h1 className="text-2xl font-bold">Livability Explorer</h1>
-              <p>Welcome, {userData.name}! Explore potential living areas.</p>
-            </div>
-            <button 
-              onClick={onReset}
-              className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition"
-            >
-              Reset User Data
-            </button>
-          </div>
-  
-          <div className="p-4 bg-gray-100 flex items-center space-x-4">
-            <label htmlFor="city-select" className="font-medium">Select a City:</label>
-            <select
-              id="city-select"
-              value={selectedCity}
-              onChange={(e) => handleCitySelect(e.target.value)}
-              className="form-input w-64"
-            >
-              <option value="">Choose a City</option>
-              {Object.keys(CITY_COORDINATES).sort().map((city) => (
-                <option key={city} value={city}>
-                  {city}
-                </option>
-              ))}
-            </select>
-          </div>
-          
-          <div style={{ height: '600px', width: '100%' }}>
+        <div className="min-h-screen flex flex-col justify-center items-center bg-gray-100 p-4">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold mb-2">NextCity Navigator</h1>
+          <p className="text-gray-600 mb-0">Welcome, {userData.name}! Explore potential living areas.</p>
+        </div>
+        <button 
+          onClick={onReset}
+          className="mt-4 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition"
+        >
+          Reset User Data
+        </button>
+      
+        <div className="p-4 bg-gray-100 flex justify-center items-center space-x-4 mt-4">
+          <label htmlFor="city-select" className="font-medium">Select a City:</label>
+          <select
+            id="city-select"
+            value={selectedCity}
+            onChange={(e) => handleCitySelect(e.target.value)}
+            className="form-input w-64 text-center"
+          >
+            <option value="">Choose a City</option>
+            {Object.keys(CITY_COORDINATES).sort().map((city) => (
+              <option key={city} value={city}>
+                {city}
+              </option>
+            ))}
+          </select>
+        </div>
+        
+        <div className="p-2 bg-white mt-4">
+          <div style={{ height: '600px', width: '100%', border: '4px solid black', borderRadius: '8px', overflow: 'hidden' }}>
             {currentLocation && (
               <MapContainer 
-                center={currentLocation} 
+                center={[39.8283, -98.5795]} // Geographical center of the contiguous US
                 zoom={4} 
+                minZoom={3}
+                maxZoom={10}
                 style={{ height: '100%', width: '100%' }}
               >
-                <MapNavigation center={currentLocation} />
+                <MapNavigation center={[39.8283, -98.5795]} />
                 
                 {/* Default map layer */}
                 <TileLayer
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                   attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 />
-  
+      
                 {/* Markers for all cities */}
                 {Object.entries(CITY_COORDINATES).map(([city, coords]) => (
                   <Marker
@@ -196,7 +196,7 @@ const createMarkerIcon = (isSelected) => {
                     <Popup>{city}</Popup>
                   </Marker>
                 ))}
-  
+      
                 {/* Dynamically added user markers */}
                 {markers.map((marker, index) => (
                   <Marker key={index} position={marker}>
@@ -216,6 +216,7 @@ const createMarkerIcon = (isSelected) => {
           </div>
         </div>
       </div>
+      
     );
   }
   
