@@ -50,7 +50,7 @@
       - To use your own Firebase for local testing, navigate to the **Firebase Console** and add a new Web app to your project. Then, use the provided config variables for your Firebase setup. Also need to enable Authentication with Google and Email/Password on Firebase Console.
 
 - **Follow README in backend folder to set up Firebase**
-- 
+  
 - **Navigate to the Backend Directory**
 -  Run: `cd backend`
 
