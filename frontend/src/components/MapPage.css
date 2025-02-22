@@ -1,0 +1,43 @@
+/* Additional styling for Map Page */
+.leaflet-container {
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .map-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+  
+  .map-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+  
+  /* Popup customization */
+  .leaflet-popup-content-wrapper {
+    border-radius: 12px;
+  }
+  
+  .leaflet-popup-content {
+    margin: 15px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .map-header, .map-footer {
+      padding: 0.5rem;
+    }
+  }
