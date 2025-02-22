@@ -1,0 +1,2277 @@
+[
+    {
+        "geo_label_citystate":"Austin, TX",
+        "date_label":2010,
+        "Average_General_Score":0.3277470672
+    },
+    {
+        "geo_label_citystate":"Austin, TX",
+        "date_label":2011,
+        "Average_General_Score":0.3272908424
+    },
+    {
+        "geo_label_citystate":"Austin, TX",
+        "date_label":2012,
+        "Average_General_Score":0.3248450539
+    },
+    {
+        "geo_label_citystate":"Austin, TX",
+        "date_label":2013,
+        "Average_General_Score":0.3251515889
+    },
+    {
+        "geo_label_citystate":"Austin, TX",
+        "date_label":2014,
+        "Average_General_Score":0.3242827389
+    },
+    {
+        "geo_label_citystate":"Austin, TX",
+        "date_label":2015,
+        "Average_General_Score":0.3220250525
+    },
+    {
+        "geo_label_citystate":"Austin, TX",
+        "date_label":2016,
+        "Average_General_Score":0.3203189271
+    },
+    {
+        "geo_label_citystate":"Austin, TX",
+        "date_label":2017,
+        "Average_General_Score":0.3199426656
+    },
+    {
+        "geo_label_citystate":"Austin, TX",
+        "date_label":2018,
+        "Average_General_Score":0.3134120016
+    },
+    {
+        "geo_label_citystate":"Austin, TX",
+        "date_label":2019,
+        "Average_General_Score":0.3042169413
+    },
+    {
+        "geo_label_citystate":"Austin, TX",
+        "date_label":2020,
+        "Average_General_Score":0.3062940018
+    },
+    {
+        "geo_label_citystate":"Austin, TX",
+        "date_label":2021,
+        "Average_General_Score":0.3056642741
+    },
+    {
+        "geo_label_citystate":"Austin, TX",
+        "date_label":2022,
+        "Average_General_Score":0.3061112738
+    },
+    {
+        "geo_label_citystate":"Baltimore, MD",
+        "date_label":2010,
+        "Average_General_Score":0.3857056841
+    },
+    {
+        "geo_label_citystate":"Baltimore, MD",
+        "date_label":2011,
+        "Average_General_Score":0.3833771506
+    },
+    {
+        "geo_label_citystate":"Baltimore, MD",
+        "date_label":2012,
+        "Average_General_Score":0.3834594355
+    },
+    {
+        "geo_label_citystate":"Baltimore, MD",
+        "date_label":2013,
+        "Average_General_Score":0.3924620566
+    },
+    {
+        "geo_label_citystate":"Baltimore, MD",
+        "date_label":2014,
+        "Average_General_Score":0.3925598941
+    },
+    {
+        "geo_label_citystate":"Baltimore, MD",
+        "date_label":2015,
+        "Average_General_Score":0.3905802417
+    },
+    {
+        "geo_label_citystate":"Baltimore, MD",
+        "date_label":2016,
+        "Average_General_Score":0.3909359757
+    },
+    {
+        "geo_label_citystate":"Baltimore, MD",
+        "date_label":2017,
+        "Average_General_Score":0.3905532057
+    },
+    {
+        "geo_label_citystate":"Baltimore, MD",
+        "date_label":2018,
+        "Average_General_Score":0.3747307802
+    },
+    {
+        "geo_label_citystate":"Baltimore, MD",
+        "date_label":2019,
+        "Average_General_Score":0.372367377
+    },
+    {
+        "geo_label_citystate":"Baltimore, MD",
+        "date_label":2020,
+        "Average_General_Score":0.3711795448
+    },
+    {
+        "geo_label_citystate":"Baltimore, MD",
+        "date_label":2021,
+        "Average_General_Score":0.3683516748
+    },
+    {
+        "geo_label_citystate":"Baltimore, MD",
+        "date_label":2022,
+        "Average_General_Score":0.3682197224
+    },
+    {
+        "geo_label_citystate":"Boston, MA",
+        "date_label":2010,
+        "Average_General_Score":0.3845830125
+    },
+    {
+        "geo_label_citystate":"Boston, MA",
+        "date_label":2011,
+        "Average_General_Score":0.3820444043
+    },
+    {
+        "geo_label_citystate":"Boston, MA",
+        "date_label":2012,
+        "Average_General_Score":0.3819221536
+    },
+    {
+        "geo_label_citystate":"Boston, MA",
+        "date_label":2013,
+        "Average_General_Score":0.3837759959
+    },
+    {
+        "geo_label_citystate":"Boston, MA",
+        "date_label":2014,
+        "Average_General_Score":0.3842123335
+    },
+    {
+        "geo_label_citystate":"Boston, MA",
+        "date_label":2015,
+        "Average_General_Score":0.3868008307
+    },
+    {
+        "geo_label_citystate":"Boston, MA",
+        "date_label":2016,
+        "Average_General_Score":0.3868015895
+    },
+    {
+        "geo_label_citystate":"Boston, MA",
+        "date_label":2017,
+        "Average_General_Score":0.3865370685
+    },
+    {
+        "geo_label_citystate":"Boston, MA",
+        "date_label":2018,
+        "Average_General_Score":0.3813374717
+    },
+    {
+        "geo_label_citystate":"Boston, MA",
+        "date_label":2019,
+        "Average_General_Score":0.3790201356
+    },
+    {
+        "geo_label_citystate":"Boston, MA",
+        "date_label":2020,
+        "Average_General_Score":0.3736381677
+    },
+    {
+        "geo_label_citystate":"Boston, MA",
+        "date_label":2021,
+        "Average_General_Score":0.375943551
+    },
+    {
+        "geo_label_citystate":"Boston, MA",
+        "date_label":2022,
+        "Average_General_Score":0.3764447739
+    },
+    {
+        "geo_label_citystate":"Charlotte, NC",
+        "date_label":2010,
+        "Average_General_Score":0.2718474966
+    },
+    {
+        "geo_label_citystate":"Charlotte, NC",
+        "date_label":2011,
+        "Average_General_Score":0.2710720248
+    },
+    {
+        "geo_label_citystate":"Charlotte, NC",
+        "date_label":2012,
+        "Average_General_Score":0.269611232
+    },
+    {
+        "geo_label_citystate":"Charlotte, NC",
+        "date_label":2013,
+        "Average_General_Score":0.2649997953
+    },
+    {
+        "geo_label_citystate":"Charlotte, NC",
+        "date_label":2014,
+        "Average_General_Score":0.2640739097
+    },
+    {
+        "geo_label_citystate":"Charlotte, NC",
+        "date_label":2015,
+        "Average_General_Score":0.2638675986
+    },
+    {
+        "geo_label_citystate":"Charlotte, NC",
+        "date_label":2016,
+        "Average_General_Score":0.2627796835
+    },
+    {
+        "geo_label_citystate":"Charlotte, NC",
+        "date_label":2017,
+        "Average_General_Score":0.2633390389
+    },
+    {
+        "geo_label_citystate":"Charlotte, NC",
+        "date_label":2018,
+        "Average_General_Score":0.2532517918
+    },
+    {
+        "geo_label_citystate":"Charlotte, NC",
+        "date_label":2019,
+        "Average_General_Score":0.2553922335
+    },
+    {
+        "geo_label_citystate":"Charlotte, NC",
+        "date_label":2020,
+        "Average_General_Score":0.2540819629
+    },
+    {
+        "geo_label_citystate":"Charlotte, NC",
+        "date_label":2021,
+        "Average_General_Score":0.2561634036
+    },
+    {
+        "geo_label_citystate":"Charlotte, NC",
+        "date_label":2022,
+        "Average_General_Score":0.2564771295
+    },
+    {
+        "geo_label_citystate":"Chicago, IL",
+        "date_label":2010,
+        "Average_General_Score":0.3847005339
+    },
+    {
+        "geo_label_citystate":"Chicago, IL",
+        "date_label":2011,
+        "Average_General_Score":0.3831282997
+    },
+    {
+        "geo_label_citystate":"Chicago, IL",
+        "date_label":2012,
+        "Average_General_Score":0.3823707804
+    },
+    {
+        "geo_label_citystate":"Chicago, IL",
+        "date_label":2013,
+        "Average_General_Score":0.3807325214
+    },
+    {
+        "geo_label_citystate":"Chicago, IL",
+        "date_label":2014,
+        "Average_General_Score":0.3803967233
+    },
+    {
+        "geo_label_citystate":"Chicago, IL",
+        "date_label":2015,
+        "Average_General_Score":0.3796445148
+    },
+    {
+        "geo_label_citystate":"Chicago, IL",
+        "date_label":2016,
+        "Average_General_Score":0.3782439985
+    },
+    {
+        "geo_label_citystate":"Chicago, IL",
+        "date_label":2017,
+        "Average_General_Score":0.3763519254
+    },
+    {
+        "geo_label_citystate":"Chicago, IL",
+        "date_label":2018,
+        "Average_General_Score":0.3611974841
+    },
+    {
+        "geo_label_citystate":"Chicago, IL",
+        "date_label":2019,
+        "Average_General_Score":0.364293982
+    },
+    {
+        "geo_label_citystate":"Chicago, IL",
+        "date_label":2020,
+        "Average_General_Score":0.3585118237
+    },
+    {
+        "geo_label_citystate":"Chicago, IL",
+        "date_label":2021,
+        "Average_General_Score":0.3612344182
+    },
+    {
+        "geo_label_citystate":"Chicago, IL",
+        "date_label":2022,
+        "Average_General_Score":0.3609038959
+    },
+    {
+        "geo_label_citystate":"Cleveland, OH",
+        "date_label":2010,
+        "Average_General_Score":0.4165442981
+    },
+    {
+        "geo_label_citystate":"Cleveland, OH",
+        "date_label":2011,
+        "Average_General_Score":0.4162392241
+    },
+    {
+        "geo_label_citystate":"Cleveland, OH",
+        "date_label":2012,
+        "Average_General_Score":0.4160559816
+    },
+    {
+        "geo_label_citystate":"Cleveland, OH",
+        "date_label":2013,
+        "Average_General_Score":0.4204733736
+    },
+    {
+        "geo_label_citystate":"Cleveland, OH",
+        "date_label":2014,
+        "Average_General_Score":0.4200649734
+    },
+    {
+        "geo_label_citystate":"Cleveland, OH",
+        "date_label":2015,
+        "Average_General_Score":0.423627462
+    },
+    {
+        "geo_label_citystate":"Cleveland, OH",
+        "date_label":2016,
+        "Average_General_Score":0.4214452516
+    },
+    {
+        "geo_label_citystate":"Cleveland, OH",
+        "date_label":2017,
+        "Average_General_Score":0.4245317417
+    },
+    {
+        "geo_label_citystate":"Cleveland, OH",
+        "date_label":2018,
+        "Average_General_Score":0.4077430551
+    },
+    {
+        "geo_label_citystate":"Cleveland, OH",
+        "date_label":2019,
+        "Average_General_Score":0.3841927434
+    },
+    {
+        "geo_label_citystate":"Cleveland, OH",
+        "date_label":2020,
+        "Average_General_Score":0.383013341
+    },
+    {
+        "geo_label_citystate":"Cleveland, OH",
+        "date_label":2021,
+        "Average_General_Score":0.3827880129
+    },
+    {
+        "geo_label_citystate":"Cleveland, OH",
+        "date_label":2022,
+        "Average_General_Score":0.3843270757
+    },
+    {
+        "geo_label_citystate":"Columbus, OH",
+        "date_label":2010,
+        "Average_General_Score":0.2896532829
+    },
+    {
+        "geo_label_citystate":"Columbus, OH",
+        "date_label":2011,
+        "Average_General_Score":0.2877513324
+    },
+    {
+        "geo_label_citystate":"Columbus, OH",
+        "date_label":2012,
+        "Average_General_Score":0.2879784258
+    },
+    {
+        "geo_label_citystate":"Columbus, OH",
+        "date_label":2013,
+        "Average_General_Score":0.2878772743
+    },
+    {
+        "geo_label_citystate":"Columbus, OH",
+        "date_label":2014,
+        "Average_General_Score":0.2876943271
+    },
+    {
+        "geo_label_citystate":"Columbus, OH",
+        "date_label":2015,
+        "Average_General_Score":0.2853995332
+    },
+    {
+        "geo_label_citystate":"Columbus, OH",
+        "date_label":2016,
+        "Average_General_Score":0.2853619476
+    },
+    {
+        "geo_label_citystate":"Columbus, OH",
+        "date_label":2017,
+        "Average_General_Score":0.2886025582
+    },
+    {
+        "geo_label_citystate":"Columbus, OH",
+        "date_label":2018,
+        "Average_General_Score":0.2764681634
+    },
+    {
+        "geo_label_citystate":"Columbus, OH",
+        "date_label":2019,
+        "Average_General_Score":0.276527649
+    },
+    {
+        "geo_label_citystate":"Columbus, OH",
+        "date_label":2020,
+        "Average_General_Score":0.2766162937
+    },
+    {
+        "geo_label_citystate":"Columbus, OH",
+        "date_label":2021,
+        "Average_General_Score":0.2761219756
+    },
+    {
+        "geo_label_citystate":"Columbus, OH",
+        "date_label":2022,
+        "Average_General_Score":0.2767971862
+    },
+    {
+        "geo_label_citystate":"Dallas, TX",
+        "date_label":2010,
+        "Average_General_Score":0.3686976189
+    },
+    {
+        "geo_label_citystate":"Dallas, TX",
+        "date_label":2011,
+        "Average_General_Score":0.3679339518
+    },
+    {
+        "geo_label_citystate":"Dallas, TX",
+        "date_label":2012,
+        "Average_General_Score":0.3657935418
+    },
+    {
+        "geo_label_citystate":"Dallas, TX",
+        "date_label":2013,
+        "Average_General_Score":0.3612451692
+    },
+    {
+        "geo_label_citystate":"Dallas, TX",
+        "date_label":2014,
+        "Average_General_Score":0.360405394
+    },
+    {
+        "geo_label_citystate":"Dallas, TX",
+        "date_label":2015,
+        "Average_General_Score":0.3595330806
+    },
+    {
+        "geo_label_citystate":"Dallas, TX",
+        "date_label":2016,
+        "Average_General_Score":0.3579485989
+    },
+    {
+        "geo_label_citystate":"Dallas, TX",
+        "date_label":2017,
+        "Average_General_Score":0.3622266828
+    },
+    {
+        "geo_label_citystate":"Dallas, TX",
+        "date_label":2018,
+        "Average_General_Score":0.3591839827
+    },
+    {
+        "geo_label_citystate":"Dallas, TX",
+        "date_label":2019,
+        "Average_General_Score":0.3506979683
+    },
+    {
+        "geo_label_citystate":"Dallas, TX",
+        "date_label":2020,
+        "Average_General_Score":0.3510409824
+    },
+    {
+        "geo_label_citystate":"Dallas, TX",
+        "date_label":2021,
+        "Average_General_Score":0.3503741958
+    },
+    {
+        "geo_label_citystate":"Dallas, TX",
+        "date_label":2022,
+        "Average_General_Score":0.3505424555
+    },
+    {
+        "geo_label_citystate":"Denver, CO",
+        "date_label":2010,
+        "Average_General_Score":0.2994248084
+    },
+    {
+        "geo_label_citystate":"Denver, CO",
+        "date_label":2011,
+        "Average_General_Score":0.2985541412
+    },
+    {
+        "geo_label_citystate":"Denver, CO",
+        "date_label":2012,
+        "Average_General_Score":0.2955404445
+    },
+    {
+        "geo_label_citystate":"Denver, CO",
+        "date_label":2013,
+        "Average_General_Score":0.2909619058
+    },
+    {
+        "geo_label_citystate":"Denver, CO",
+        "date_label":2014,
+        "Average_General_Score":0.2900316856
+    },
+    {
+        "geo_label_citystate":"Denver, CO",
+        "date_label":2015,
+        "Average_General_Score":0.2849085874
+    },
+    {
+        "geo_label_citystate":"Denver, CO",
+        "date_label":2016,
+        "Average_General_Score":0.2862093578
+    },
+    {
+        "geo_label_citystate":"Denver, CO",
+        "date_label":2017,
+        "Average_General_Score":0.288971462
+    },
+    {
+        "geo_label_citystate":"Denver, CO",
+        "date_label":2018,
+        "Average_General_Score":0.2781902012
+    },
+    {
+        "geo_label_citystate":"Denver, CO",
+        "date_label":2019,
+        "Average_General_Score":0.2779064242
+    },
+    {
+        "geo_label_citystate":"Denver, CO",
+        "date_label":2020,
+        "Average_General_Score":0.277398437
+    },
+    {
+        "geo_label_citystate":"Denver, CO",
+        "date_label":2021,
+        "Average_General_Score":0.2779932188
+    },
+    {
+        "geo_label_citystate":"Denver, CO",
+        "date_label":2022,
+        "Average_General_Score":0.2784830921
+    },
+    {
+        "geo_label_citystate":"Detroit, MI",
+        "date_label":2010,
+        "Average_General_Score":0.4535312764
+    },
+    {
+        "geo_label_citystate":"Detroit, MI",
+        "date_label":2011,
+        "Average_General_Score":0.453650392
+    },
+    {
+        "geo_label_citystate":"Detroit, MI",
+        "date_label":2012,
+        "Average_General_Score":0.4525509415
+    },
+    {
+        "geo_label_citystate":"Detroit, MI",
+        "date_label":2013,
+        "Average_General_Score":0.4520203773
+    },
+    {
+        "geo_label_citystate":"Detroit, MI",
+        "date_label":2014,
+        "Average_General_Score":0.4502176431
+    },
+    {
+        "geo_label_citystate":"Detroit, MI",
+        "date_label":2015,
+        "Average_General_Score":0.4490768245
+    },
+    {
+        "geo_label_citystate":"Detroit, MI",
+        "date_label":2016,
+        "Average_General_Score":0.4497322724
+    },
+    {
+        "geo_label_citystate":"Detroit, MI",
+        "date_label":2017,
+        "Average_General_Score":0.4457583761
+    },
+    {
+        "geo_label_citystate":"Detroit, MI",
+        "date_label":2018,
+        "Average_General_Score":0.4195766763
+    },
+    {
+        "geo_label_citystate":"Detroit, MI",
+        "date_label":2019,
+        "Average_General_Score":0.3971896206
+    },
+    {
+        "geo_label_citystate":"Detroit, MI",
+        "date_label":2020,
+        "Average_General_Score":0.3975906496
+    },
+    {
+        "geo_label_citystate":"Detroit, MI",
+        "date_label":2021,
+        "Average_General_Score":0.3994245913
+    },
+    {
+        "geo_label_citystate":"Detroit, MI",
+        "date_label":2022,
+        "Average_General_Score":0.4001054238
+    },
+    {
+        "geo_label_citystate":"El Paso, TX",
+        "date_label":2010,
+        "Average_General_Score":0.3533401887
+    },
+    {
+        "geo_label_citystate":"El Paso, TX",
+        "date_label":2011,
+        "Average_General_Score":0.351118473
+    },
+    {
+        "geo_label_citystate":"El Paso, TX",
+        "date_label":2012,
+        "Average_General_Score":0.3498928371
+    },
+    {
+        "geo_label_citystate":"El Paso, TX",
+        "date_label":2013,
+        "Average_General_Score":0.3397239444
+    },
+    {
+        "geo_label_citystate":"El Paso, TX",
+        "date_label":2014,
+        "Average_General_Score":0.3401376305
+    },
+    {
+        "geo_label_citystate":"El Paso, TX",
+        "date_label":2015,
+        "Average_General_Score":0.3378089315
+    },
+    {
+        "geo_label_citystate":"El Paso, TX",
+        "date_label":2016,
+        "Average_General_Score":0.3387927829
+    },
+    {
+        "geo_label_citystate":"El Paso, TX",
+        "date_label":2017,
+        "Average_General_Score":0.3438394254
+    },
+    {
+        "geo_label_citystate":"El Paso, TX",
+        "date_label":2018,
+        "Average_General_Score":0.3494183227
+    },
+    {
+        "geo_label_citystate":"El Paso, TX",
+        "date_label":2019,
+        "Average_General_Score":0.3461076171
+    },
+    {
+        "geo_label_citystate":"El Paso, TX",
+        "date_label":2020,
+        "Average_General_Score":0.3498058438
+    },
+    {
+        "geo_label_citystate":"El Paso, TX",
+        "date_label":2021,
+        "Average_General_Score":0.3496795399
+    },
+    {
+        "geo_label_citystate":"El Paso, TX",
+        "date_label":2022,
+        "Average_General_Score":0.3493897651
+    },
+    {
+        "geo_label_citystate":"Houston, TX",
+        "date_label":2010,
+        "Average_General_Score":0.3742660426
+    },
+    {
+        "geo_label_citystate":"Houston, TX",
+        "date_label":2011,
+        "Average_General_Score":0.3735190676
+    },
+    {
+        "geo_label_citystate":"Houston, TX",
+        "date_label":2012,
+        "Average_General_Score":0.3724737515
+    },
+    {
+        "geo_label_citystate":"Houston, TX",
+        "date_label":2013,
+        "Average_General_Score":0.3698759556
+    },
+    {
+        "geo_label_citystate":"Houston, TX",
+        "date_label":2014,
+        "Average_General_Score":0.3699822385
+    },
+    {
+        "geo_label_citystate":"Houston, TX",
+        "date_label":2015,
+        "Average_General_Score":0.3657579075
+    },
+    {
+        "geo_label_citystate":"Houston, TX",
+        "date_label":2016,
+        "Average_General_Score":0.3637693243
+    },
+    {
+        "geo_label_citystate":"Houston, TX",
+        "date_label":2017,
+        "Average_General_Score":0.3686913134
+    },
+    {
+        "geo_label_citystate":"Houston, TX",
+        "date_label":2018,
+        "Average_General_Score":0.3747296754
+    },
+    {
+        "geo_label_citystate":"Houston, TX",
+        "date_label":2019,
+        "Average_General_Score":0.3653882641
+    },
+    {
+        "geo_label_citystate":"Houston, TX",
+        "date_label":2020,
+        "Average_General_Score":0.3670622042
+    },
+    {
+        "geo_label_citystate":"Houston, TX",
+        "date_label":2021,
+        "Average_General_Score":0.3657109094
+    },
+    {
+        "geo_label_citystate":"Houston, TX",
+        "date_label":2022,
+        "Average_General_Score":0.3658161974
+    },
+    {
+        "geo_label_citystate":"Indianapolis, IN",
+        "date_label":2010,
+        "Average_General_Score":0.3103152414
+    },
+    {
+        "geo_label_citystate":"Indianapolis, IN",
+        "date_label":2011,
+        "Average_General_Score":0.3096890003
+    },
+    {
+        "geo_label_citystate":"Indianapolis, IN",
+        "date_label":2012,
+        "Average_General_Score":0.3096697145
+    },
+    {
+        "geo_label_citystate":"Indianapolis, IN",
+        "date_label":2013,
+        "Average_General_Score":0.3156044833
+    },
+    {
+        "geo_label_citystate":"Indianapolis, IN",
+        "date_label":2014,
+        "Average_General_Score":0.3149521327
+    },
+    {
+        "geo_label_citystate":"Indianapolis, IN",
+        "date_label":2015,
+        "Average_General_Score":0.3133783168
+    },
+    {
+        "geo_label_citystate":"Indianapolis, IN",
+        "date_label":2016,
+        "Average_General_Score":0.3150765831
+    },
+    {
+        "geo_label_citystate":"Indianapolis, IN",
+        "date_label":2017,
+        "Average_General_Score":0.3139782338
+    },
+    {
+        "geo_label_citystate":"Indianapolis, IN",
+        "date_label":2018,
+        "Average_General_Score":0.3044256159
+    },
+    {
+        "geo_label_citystate":"Indianapolis, IN",
+        "date_label":2019,
+        "Average_General_Score":0.3017416898
+    },
+    {
+        "geo_label_citystate":"Indianapolis, IN",
+        "date_label":2020,
+        "Average_General_Score":0.3028541979
+    },
+    {
+        "geo_label_citystate":"Indianapolis, IN",
+        "date_label":2021,
+        "Average_General_Score":0.3004937274
+    },
+    {
+        "geo_label_citystate":"Indianapolis, IN",
+        "date_label":2022,
+        "Average_General_Score":0.3016975629
+    },
+    {
+        "geo_label_citystate":"Kansas City, MO",
+        "date_label":2010,
+        "Average_General_Score":0.3210234703
+    },
+    {
+        "geo_label_citystate":"Kansas City, MO",
+        "date_label":2011,
+        "Average_General_Score":0.3199798214
+    },
+    {
+        "geo_label_citystate":"Kansas City, MO",
+        "date_label":2012,
+        "Average_General_Score":0.3188131023
+    },
+    {
+        "geo_label_citystate":"Kansas City, MO",
+        "date_label":2013,
+        "Average_General_Score":0.3177303839
+    },
+    {
+        "geo_label_citystate":"Kansas City, MO",
+        "date_label":2014,
+        "Average_General_Score":0.3166582311
+    },
+    {
+        "geo_label_citystate":"Kansas City, MO",
+        "date_label":2015,
+        "Average_General_Score":0.3156021574
+    },
+    {
+        "geo_label_citystate":"Kansas City, MO",
+        "date_label":2016,
+        "Average_General_Score":0.3158471111
+    },
+    {
+        "geo_label_citystate":"Kansas City, MO",
+        "date_label":2017,
+        "Average_General_Score":0.3172207333
+    },
+    {
+        "geo_label_citystate":"Kansas City, MO",
+        "date_label":2018,
+        "Average_General_Score":0.3045998721
+    },
+    {
+        "geo_label_citystate":"Kansas City, MO",
+        "date_label":2019,
+        "Average_General_Score":0.3107259007
+    },
+    {
+        "geo_label_citystate":"Kansas City, MO",
+        "date_label":2020,
+        "Average_General_Score":0.3098044023
+    },
+    {
+        "geo_label_citystate":"Kansas City, MO",
+        "date_label":2021,
+        "Average_General_Score":0.3116262603
+    },
+    {
+        "geo_label_citystate":"Kansas City, MO",
+        "date_label":2022,
+        "Average_General_Score":0.3118993522
+    },
+    {
+        "geo_label_citystate":"Las Vegas, NV",
+        "date_label":2010,
+        "Average_General_Score":0.2739230673
+    },
+    {
+        "geo_label_citystate":"Las Vegas, NV",
+        "date_label":2011,
+        "Average_General_Score":0.2730068772
+    },
+    {
+        "geo_label_citystate":"Las Vegas, NV",
+        "date_label":2012,
+        "Average_General_Score":0.2715729444
+    },
+    {
+        "geo_label_citystate":"Las Vegas, NV",
+        "date_label":2013,
+        "Average_General_Score":0.2812974148
+    },
+    {
+        "geo_label_citystate":"Las Vegas, NV",
+        "date_label":2014,
+        "Average_General_Score":0.2811610677
+    },
+    {
+        "geo_label_citystate":"Las Vegas, NV",
+        "date_label":2015,
+        "Average_General_Score":0.2770803721
+    },
+    {
+        "geo_label_citystate":"Las Vegas, NV",
+        "date_label":2016,
+        "Average_General_Score":0.2791733373
+    },
+    {
+        "geo_label_citystate":"Las Vegas, NV",
+        "date_label":2017,
+        "Average_General_Score":0.2821841273
+    },
+    {
+        "geo_label_citystate":"Las Vegas, NV",
+        "date_label":2018,
+        "Average_General_Score":0.2781329805
+    },
+    {
+        "geo_label_citystate":"Las Vegas, NV",
+        "date_label":2019,
+        "Average_General_Score":0.2791539279
+    },
+    {
+        "geo_label_citystate":"Las Vegas, NV",
+        "date_label":2020,
+        "Average_General_Score":0.2820076425
+    },
+    {
+        "geo_label_citystate":"Las Vegas, NV",
+        "date_label":2021,
+        "Average_General_Score":0.2800578429
+    },
+    {
+        "geo_label_citystate":"Las Vegas, NV",
+        "date_label":2022,
+        "Average_General_Score":0.2802330636
+    },
+    {
+        "geo_label_citystate":"Long Beach, CA",
+        "date_label":2010,
+        "Average_General_Score":0.4040176468
+    },
+    {
+        "geo_label_citystate":"Long Beach, CA",
+        "date_label":2011,
+        "Average_General_Score":0.4027416528
+    },
+    {
+        "geo_label_citystate":"Long Beach, CA",
+        "date_label":2012,
+        "Average_General_Score":0.401196614
+    },
+    {
+        "geo_label_citystate":"Long Beach, CA",
+        "date_label":2013,
+        "Average_General_Score":0.3894203519
+    },
+    {
+        "geo_label_citystate":"Long Beach, CA",
+        "date_label":2014,
+        "Average_General_Score":0.3883729926
+    },
+    {
+        "geo_label_citystate":"Long Beach, CA",
+        "date_label":2015,
+        "Average_General_Score":0.3927814212
+    },
+    {
+        "geo_label_citystate":"Long Beach, CA",
+        "date_label":2016,
+        "Average_General_Score":0.3921011588
+    },
+    {
+        "geo_label_citystate":"Long Beach, CA",
+        "date_label":2017,
+        "Average_General_Score":0.3892627855
+    },
+    {
+        "geo_label_citystate":"Long Beach, CA",
+        "date_label":2018,
+        "Average_General_Score":0.3832629912
+    },
+    {
+        "geo_label_citystate":"Long Beach, CA",
+        "date_label":2019,
+        "Average_General_Score":0.3773747329
+    },
+    {
+        "geo_label_citystate":"Long Beach, CA",
+        "date_label":2020,
+        "Average_General_Score":0.3772151058
+    },
+    {
+        "geo_label_citystate":"Long Beach, CA",
+        "date_label":2021,
+        "Average_General_Score":0.3763833789
+    },
+    {
+        "geo_label_citystate":"Long Beach, CA",
+        "date_label":2022,
+        "Average_General_Score":0.3757594392
+    },
+    {
+        "geo_label_citystate":"Los Angeles, CA",
+        "date_label":2010,
+        "Average_General_Score":0.420751807
+    },
+    {
+        "geo_label_citystate":"Los Angeles, CA",
+        "date_label":2011,
+        "Average_General_Score":0.4202211828
+    },
+    {
+        "geo_label_citystate":"Los Angeles, CA",
+        "date_label":2012,
+        "Average_General_Score":0.4188970238
+    },
+    {
+        "geo_label_citystate":"Los Angeles, CA",
+        "date_label":2013,
+        "Average_General_Score":0.4169274613
+    },
+    {
+        "geo_label_citystate":"Los Angeles, CA",
+        "date_label":2014,
+        "Average_General_Score":0.4167017075
+    },
+    {
+        "geo_label_citystate":"Los Angeles, CA",
+        "date_label":2015,
+        "Average_General_Score":0.4125143651
+    },
+    {
+        "geo_label_citystate":"Los Angeles, CA",
+        "date_label":2016,
+        "Average_General_Score":0.4116001933
+    },
+    {
+        "geo_label_citystate":"Los Angeles, CA",
+        "date_label":2017,
+        "Average_General_Score":0.4090492234
+    },
+    {
+        "geo_label_citystate":"Los Angeles, CA",
+        "date_label":2018,
+        "Average_General_Score":0.404576422
+    },
+    {
+        "geo_label_citystate":"Los Angeles, CA",
+        "date_label":2019,
+        "Average_General_Score":0.4080545021
+    },
+    {
+        "geo_label_citystate":"Los Angeles, CA",
+        "date_label":2020,
+        "Average_General_Score":0.4091458445
+    },
+    {
+        "geo_label_citystate":"Los Angeles, CA",
+        "date_label":2021,
+        "Average_General_Score":0.4084228656
+    },
+    {
+        "geo_label_citystate":"Los Angeles, CA",
+        "date_label":2022,
+        "Average_General_Score":0.4087252696
+    },
+    {
+        "geo_label_citystate":"Louisville, KY",
+        "date_label":2010,
+        "Average_General_Score":0.2918723171
+    },
+    {
+        "geo_label_citystate":"Louisville, KY",
+        "date_label":2011,
+        "Average_General_Score":0.2915851432
+    },
+    {
+        "geo_label_citystate":"Louisville, KY",
+        "date_label":2012,
+        "Average_General_Score":0.2898362263
+    },
+    {
+        "geo_label_citystate":"Louisville, KY",
+        "date_label":2013,
+        "Average_General_Score":0.2901758846
+    },
+    {
+        "geo_label_citystate":"Louisville, KY",
+        "date_label":2014,
+        "Average_General_Score":0.2903410369
+    },
+    {
+        "geo_label_citystate":"Louisville, KY",
+        "date_label":2015,
+        "Average_General_Score":0.2922462705
+    },
+    {
+        "geo_label_citystate":"Louisville, KY",
+        "date_label":2016,
+        "Average_General_Score":0.2913506464
+    },
+    {
+        "geo_label_citystate":"Louisville, KY",
+        "date_label":2017,
+        "Average_General_Score":0.2936479707
+    },
+    {
+        "geo_label_citystate":"Louisville, KY",
+        "date_label":2018,
+        "Average_General_Score":0.2912835743
+    },
+    {
+        "geo_label_citystate":"Louisville, KY",
+        "date_label":2019,
+        "Average_General_Score":0.2834921957
+    },
+    {
+        "geo_label_citystate":"Louisville, KY",
+        "date_label":2020,
+        "Average_General_Score":0.2830809579
+    },
+    {
+        "geo_label_citystate":"Louisville, KY",
+        "date_label":2021,
+        "Average_General_Score":0.2829927569
+    },
+    {
+        "geo_label_citystate":"Louisville, KY",
+        "date_label":2022,
+        "Average_General_Score":0.2832976422
+    },
+    {
+        "geo_label_citystate":"Memphis, TN",
+        "date_label":2010,
+        "Average_General_Score":0.3564907011
+    },
+    {
+        "geo_label_citystate":"Memphis, TN",
+        "date_label":2011,
+        "Average_General_Score":0.3551543448
+    },
+    {
+        "geo_label_citystate":"Memphis, TN",
+        "date_label":2012,
+        "Average_General_Score":0.3539055426
+    },
+    {
+        "geo_label_citystate":"Memphis, TN",
+        "date_label":2013,
+        "Average_General_Score":0.3450004669
+    },
+    {
+        "geo_label_citystate":"Memphis, TN",
+        "date_label":2014,
+        "Average_General_Score":0.344972196
+    },
+    {
+        "geo_label_citystate":"Memphis, TN",
+        "date_label":2015,
+        "Average_General_Score":0.3485557968
+    },
+    {
+        "geo_label_citystate":"Memphis, TN",
+        "date_label":2016,
+        "Average_General_Score":0.3494997104
+    },
+    {
+        "geo_label_citystate":"Memphis, TN",
+        "date_label":2017,
+        "Average_General_Score":0.3490083874
+    },
+    {
+        "geo_label_citystate":"Memphis, TN",
+        "date_label":2018,
+        "Average_General_Score":0.348587501
+    },
+    {
+        "geo_label_citystate":"Memphis, TN",
+        "date_label":2019,
+        "Average_General_Score":0.3530186794
+    },
+    {
+        "geo_label_citystate":"Memphis, TN",
+        "date_label":2020,
+        "Average_General_Score":0.3532502645
+    },
+    {
+        "geo_label_citystate":"Memphis, TN",
+        "date_label":2021,
+        "Average_General_Score":0.3573148539
+    },
+    {
+        "geo_label_citystate":"Memphis, TN",
+        "date_label":2022,
+        "Average_General_Score":0.3580162304
+    },
+    {
+        "geo_label_citystate":"Milwaukee, WI",
+        "date_label":2010,
+        "Average_General_Score":0.3606969774
+    },
+    {
+        "geo_label_citystate":"Milwaukee, WI",
+        "date_label":2011,
+        "Average_General_Score":0.3604234939
+    },
+    {
+        "geo_label_citystate":"Milwaukee, WI",
+        "date_label":2012,
+        "Average_General_Score":0.3589455779
+    },
+    {
+        "geo_label_citystate":"Milwaukee, WI",
+        "date_label":2013,
+        "Average_General_Score":0.3624813089
+    },
+    {
+        "geo_label_citystate":"Milwaukee, WI",
+        "date_label":2014,
+        "Average_General_Score":0.361551662
+    },
+    {
+        "geo_label_citystate":"Milwaukee, WI",
+        "date_label":2015,
+        "Average_General_Score":0.3638058806
+    },
+    {
+        "geo_label_citystate":"Milwaukee, WI",
+        "date_label":2016,
+        "Average_General_Score":0.3658381753
+    },
+    {
+        "geo_label_citystate":"Milwaukee, WI",
+        "date_label":2017,
+        "Average_General_Score":0.3663111369
+    },
+    {
+        "geo_label_citystate":"Milwaukee, WI",
+        "date_label":2018,
+        "Average_General_Score":0.357156665
+    },
+    {
+        "geo_label_citystate":"Milwaukee, WI",
+        "date_label":2019,
+        "Average_General_Score":0.358827071
+    },
+    {
+        "geo_label_citystate":"Milwaukee, WI",
+        "date_label":2020,
+        "Average_General_Score":0.3582925218
+    },
+    {
+        "geo_label_citystate":"Milwaukee, WI",
+        "date_label":2021,
+        "Average_General_Score":0.3586645331
+    },
+    {
+        "geo_label_citystate":"Milwaukee, WI",
+        "date_label":2022,
+        "Average_General_Score":0.3588534032
+    },
+    {
+        "geo_label_citystate":"Minneapolis, MN",
+        "date_label":2010,
+        "Average_General_Score":0.339175364
+    },
+    {
+        "geo_label_citystate":"Minneapolis, MN",
+        "date_label":2011,
+        "Average_General_Score":0.3387795761
+    },
+    {
+        "geo_label_citystate":"Minneapolis, MN",
+        "date_label":2012,
+        "Average_General_Score":0.3384680436
+    },
+    {
+        "geo_label_citystate":"Minneapolis, MN",
+        "date_label":2013,
+        "Average_General_Score":0.3394294185
+    },
+    {
+        "geo_label_citystate":"Minneapolis, MN",
+        "date_label":2014,
+        "Average_General_Score":0.3402922238
+    },
+    {
+        "geo_label_citystate":"Minneapolis, MN",
+        "date_label":2015,
+        "Average_General_Score":0.3368293389
+    },
+    {
+        "geo_label_citystate":"Minneapolis, MN",
+        "date_label":2016,
+        "Average_General_Score":0.3383362748
+    },
+    {
+        "geo_label_citystate":"Minneapolis, MN",
+        "date_label":2017,
+        "Average_General_Score":0.335274985
+    },
+    {
+        "geo_label_citystate":"Minneapolis, MN",
+        "date_label":2018,
+        "Average_General_Score":0.3227706487
+    },
+    {
+        "geo_label_citystate":"Minneapolis, MN",
+        "date_label":2019,
+        "Average_General_Score":0.3230140809
+    },
+    {
+        "geo_label_citystate":"Minneapolis, MN",
+        "date_label":2020,
+        "Average_General_Score":0.3236471489
+    },
+    {
+        "geo_label_citystate":"Minneapolis, MN",
+        "date_label":2021,
+        "Average_General_Score":0.3238430665
+    },
+    {
+        "geo_label_citystate":"Minneapolis, MN",
+        "date_label":2022,
+        "Average_General_Score":0.3235009347
+    },
+    {
+        "geo_label_citystate":"New York City, NY",
+        "date_label":2010,
+        "Average_General_Score":0.4050825947
+    },
+    {
+        "geo_label_citystate":"New York City, NY",
+        "date_label":2011,
+        "Average_General_Score":0.404109238
+    },
+    {
+        "geo_label_citystate":"New York City, NY",
+        "date_label":2012,
+        "Average_General_Score":0.4025185736
+    },
+    {
+        "geo_label_citystate":"New York City, NY",
+        "date_label":2013,
+        "Average_General_Score":0.4017117296
+    },
+    {
+        "geo_label_citystate":"New York City, NY",
+        "date_label":2014,
+        "Average_General_Score":0.4008296153
+    },
+    {
+        "geo_label_citystate":"New York City, NY",
+        "date_label":2015,
+        "Average_General_Score":0.4000186825
+    },
+    {
+        "geo_label_citystate":"New York City, NY",
+        "date_label":2016,
+        "Average_General_Score":0.3992716016
+    },
+    {
+        "geo_label_citystate":"New York City, NY",
+        "date_label":2017,
+        "Average_General_Score":0.399112966
+    },
+    {
+        "geo_label_citystate":"New York City, NY",
+        "date_label":2018,
+        "Average_General_Score":0.3991804602
+    },
+    {
+        "geo_label_citystate":"New York City, NY",
+        "date_label":2019,
+        "Average_General_Score":0.4049919125
+    },
+    {
+        "geo_label_citystate":"New York City, NY",
+        "date_label":2020,
+        "Average_General_Score":0.4019980269
+    },
+    {
+        "geo_label_citystate":"New York City, NY",
+        "date_label":2021,
+        "Average_General_Score":0.4027350052
+    },
+    {
+        "geo_label_citystate":"New York City, NY",
+        "date_label":2022,
+        "Average_General_Score":0.4016599994
+    },
+    {
+        "geo_label_citystate":"Oakland, CA",
+        "date_label":2010,
+        "Average_General_Score":0.3716077579
+    },
+    {
+        "geo_label_citystate":"Oakland, CA",
+        "date_label":2011,
+        "Average_General_Score":0.3696253176
+    },
+    {
+        "geo_label_citystate":"Oakland, CA",
+        "date_label":2012,
+        "Average_General_Score":0.369024568
+    },
+    {
+        "geo_label_citystate":"Oakland, CA",
+        "date_label":2013,
+        "Average_General_Score":0.3542832139
+    },
+    {
+        "geo_label_citystate":"Oakland, CA",
+        "date_label":2014,
+        "Average_General_Score":0.3537664556
+    },
+    {
+        "geo_label_citystate":"Oakland, CA",
+        "date_label":2015,
+        "Average_General_Score":0.3554412697
+    },
+    {
+        "geo_label_citystate":"Oakland, CA",
+        "date_label":2016,
+        "Average_General_Score":0.356460673
+    },
+    {
+        "geo_label_citystate":"Oakland, CA",
+        "date_label":2017,
+        "Average_General_Score":0.3529730413
+    },
+    {
+        "geo_label_citystate":"Oakland, CA",
+        "date_label":2018,
+        "Average_General_Score":0.3457725106
+    },
+    {
+        "geo_label_citystate":"Oakland, CA",
+        "date_label":2019,
+        "Average_General_Score":0.3404113826
+    },
+    {
+        "geo_label_citystate":"Oakland, CA",
+        "date_label":2020,
+        "Average_General_Score":0.3405000061
+    },
+    {
+        "geo_label_citystate":"Oakland, CA",
+        "date_label":2021,
+        "Average_General_Score":0.3400213674
+    },
+    {
+        "geo_label_citystate":"Oakland, CA",
+        "date_label":2022,
+        "Average_General_Score":0.3398325874
+    },
+    {
+        "geo_label_citystate":"Oklahoma City, OK",
+        "date_label":2010,
+        "Average_General_Score":0.301828611
+    },
+    {
+        "geo_label_citystate":"Oklahoma City, OK",
+        "date_label":2011,
+        "Average_General_Score":0.3006206882
+    },
+    {
+        "geo_label_citystate":"Oklahoma City, OK",
+        "date_label":2012,
+        "Average_General_Score":0.2997862979
+    },
+    {
+        "geo_label_citystate":"Oklahoma City, OK",
+        "date_label":2013,
+        "Average_General_Score":0.3014579911
+    },
+    {
+        "geo_label_citystate":"Oklahoma City, OK",
+        "date_label":2014,
+        "Average_General_Score":0.3010693173
+    },
+    {
+        "geo_label_citystate":"Oklahoma City, OK",
+        "date_label":2015,
+        "Average_General_Score":0.3024938238
+    },
+    {
+        "geo_label_citystate":"Oklahoma City, OK",
+        "date_label":2016,
+        "Average_General_Score":0.3020474294
+    },
+    {
+        "geo_label_citystate":"Oklahoma City, OK",
+        "date_label":2017,
+        "Average_General_Score":0.3058338148
+    },
+    {
+        "geo_label_citystate":"Oklahoma City, OK",
+        "date_label":2018,
+        "Average_General_Score":0.3052410783
+    },
+    {
+        "geo_label_citystate":"Oklahoma City, OK",
+        "date_label":2019,
+        "Average_General_Score":0.3061814915
+    },
+    {
+        "geo_label_citystate":"Oklahoma City, OK",
+        "date_label":2020,
+        "Average_General_Score":0.305741514
+    },
+    {
+        "geo_label_citystate":"Oklahoma City, OK",
+        "date_label":2021,
+        "Average_General_Score":0.3070149466
+    },
+    {
+        "geo_label_citystate":"Oklahoma City, OK",
+        "date_label":2022,
+        "Average_General_Score":0.3076990835
+    },
+    {
+        "geo_label_citystate":"Philadelphia, PA",
+        "date_label":2010,
+        "Average_General_Score":0.3905891238
+    },
+    {
+        "geo_label_citystate":"Philadelphia, PA",
+        "date_label":2011,
+        "Average_General_Score":0.38996553
+    },
+    {
+        "geo_label_citystate":"Philadelphia, PA",
+        "date_label":2012,
+        "Average_General_Score":0.3893637302
+    },
+    {
+        "geo_label_citystate":"Philadelphia, PA",
+        "date_label":2013,
+        "Average_General_Score":0.3909158387
+    },
+    {
+        "geo_label_citystate":"Philadelphia, PA",
+        "date_label":2014,
+        "Average_General_Score":0.3897952362
+    },
+    {
+        "geo_label_citystate":"Philadelphia, PA",
+        "date_label":2015,
+        "Average_General_Score":0.3880756947
+    },
+    {
+        "geo_label_citystate":"Philadelphia, PA",
+        "date_label":2016,
+        "Average_General_Score":0.3886982619
+    },
+    {
+        "geo_label_citystate":"Philadelphia, PA",
+        "date_label":2017,
+        "Average_General_Score":0.390438829
+    },
+    {
+        "geo_label_citystate":"Philadelphia, PA",
+        "date_label":2018,
+        "Average_General_Score":0.3823761873
+    },
+    {
+        "geo_label_citystate":"Philadelphia, PA",
+        "date_label":2019,
+        "Average_General_Score":0.3811645352
+    },
+    {
+        "geo_label_citystate":"Philadelphia, PA",
+        "date_label":2020,
+        "Average_General_Score":0.3811596493
+    },
+    {
+        "geo_label_citystate":"Philadelphia, PA",
+        "date_label":2021,
+        "Average_General_Score":0.3812353451
+    },
+    {
+        "geo_label_citystate":"Philadelphia, PA",
+        "date_label":2022,
+        "Average_General_Score":0.381286036
+    },
+    {
+        "geo_label_citystate":"Phoenix, AZ",
+        "date_label":2010,
+        "Average_General_Score":0.2782630528
+    },
+    {
+        "geo_label_citystate":"Phoenix, AZ",
+        "date_label":2011,
+        "Average_General_Score":0.2772741526
+    },
+    {
+        "geo_label_citystate":"Phoenix, AZ",
+        "date_label":2012,
+        "Average_General_Score":0.2768188327
+    },
+    {
+        "geo_label_citystate":"Phoenix, AZ",
+        "date_label":2013,
+        "Average_General_Score":0.2767045988
+    },
+    {
+        "geo_label_citystate":"Phoenix, AZ",
+        "date_label":2014,
+        "Average_General_Score":0.2761569253
+    },
+    {
+        "geo_label_citystate":"Phoenix, AZ",
+        "date_label":2015,
+        "Average_General_Score":0.2770847893
+    },
+    {
+        "geo_label_citystate":"Phoenix, AZ",
+        "date_label":2016,
+        "Average_General_Score":0.277742382
+    },
+    {
+        "geo_label_citystate":"Phoenix, AZ",
+        "date_label":2017,
+        "Average_General_Score":0.279248418
+    },
+    {
+        "geo_label_citystate":"Phoenix, AZ",
+        "date_label":2018,
+        "Average_General_Score":0.2671667258
+    },
+    {
+        "geo_label_citystate":"Phoenix, AZ",
+        "date_label":2019,
+        "Average_General_Score":0.2690466544
+    },
+    {
+        "geo_label_citystate":"Phoenix, AZ",
+        "date_label":2020,
+        "Average_General_Score":0.2694611786
+    },
+    {
+        "geo_label_citystate":"Phoenix, AZ",
+        "date_label":2021,
+        "Average_General_Score":0.2715106956
+    },
+    {
+        "geo_label_citystate":"Phoenix, AZ",
+        "date_label":2022,
+        "Average_General_Score":0.2721394428
+    },
+    {
+        "geo_label_citystate":"Portland, OR",
+        "date_label":2010,
+        "Average_General_Score":0.3097124888
+    },
+    {
+        "geo_label_citystate":"Portland, OR",
+        "date_label":2011,
+        "Average_General_Score":0.3090683575
+    },
+    {
+        "geo_label_citystate":"Portland, OR",
+        "date_label":2012,
+        "Average_General_Score":0.3083888453
+    },
+    {
+        "geo_label_citystate":"Portland, OR",
+        "date_label":2013,
+        "Average_General_Score":0.3163116027
+    },
+    {
+        "geo_label_citystate":"Portland, OR",
+        "date_label":2014,
+        "Average_General_Score":0.3156066176
+    },
+    {
+        "geo_label_citystate":"Portland, OR",
+        "date_label":2015,
+        "Average_General_Score":0.3113952415
+    },
+    {
+        "geo_label_citystate":"Portland, OR",
+        "date_label":2016,
+        "Average_General_Score":0.3100039564
+    },
+    {
+        "geo_label_citystate":"Portland, OR",
+        "date_label":2017,
+        "Average_General_Score":0.3143677341
+    },
+    {
+        "geo_label_citystate":"Portland, OR",
+        "date_label":2018,
+        "Average_General_Score":0.2929125984
+    },
+    {
+        "geo_label_citystate":"Portland, OR",
+        "date_label":2019,
+        "Average_General_Score":0.2913410017
+    },
+    {
+        "geo_label_citystate":"Portland, OR",
+        "date_label":2020,
+        "Average_General_Score":0.289359949
+    },
+    {
+        "geo_label_citystate":"Portland, OR",
+        "date_label":2021,
+        "Average_General_Score":0.2902887707
+    },
+    {
+        "geo_label_citystate":"Portland, OR",
+        "date_label":2022,
+        "Average_General_Score":0.2918236044
+    },
+    {
+        "geo_label_citystate":"San Antonio, TX",
+        "date_label":2010,
+        "Average_General_Score":0.3457299814
+    },
+    {
+        "geo_label_citystate":"San Antonio, TX",
+        "date_label":2011,
+        "Average_General_Score":0.3459174179
+    },
+    {
+        "geo_label_citystate":"San Antonio, TX",
+        "date_label":2012,
+        "Average_General_Score":0.34566995
+    },
+    {
+        "geo_label_citystate":"San Antonio, TX",
+        "date_label":2013,
+        "Average_General_Score":0.3401400573
+    },
+    {
+        "geo_label_citystate":"San Antonio, TX",
+        "date_label":2014,
+        "Average_General_Score":0.3386760095
+    },
+    {
+        "geo_label_citystate":"San Antonio, TX",
+        "date_label":2015,
+        "Average_General_Score":0.3371687548
+    },
+    {
+        "geo_label_citystate":"San Antonio, TX",
+        "date_label":2016,
+        "Average_General_Score":0.3382809062
+    },
+    {
+        "geo_label_citystate":"San Antonio, TX",
+        "date_label":2017,
+        "Average_General_Score":0.3445909215
+    },
+    {
+        "geo_label_citystate":"San Antonio, TX",
+        "date_label":2018,
+        "Average_General_Score":0.3463609814
+    },
+    {
+        "geo_label_citystate":"San Antonio, TX",
+        "date_label":2019,
+        "Average_General_Score":0.3548060861
+    },
+    {
+        "geo_label_citystate":"San Antonio, TX",
+        "date_label":2020,
+        "Average_General_Score":0.3559305234
+    },
+    {
+        "geo_label_citystate":"San Antonio, TX",
+        "date_label":2021,
+        "Average_General_Score":0.356883027
+    },
+    {
+        "geo_label_citystate":"San Antonio, TX",
+        "date_label":2022,
+        "Average_General_Score":0.3583306841
+    },
+    {
+        "geo_label_citystate":"San Diego, CA",
+        "date_label":2010,
+        "Average_General_Score":0.3116185378
+    },
+    {
+        "geo_label_citystate":"San Diego, CA",
+        "date_label":2011,
+        "Average_General_Score":0.3109529331
+    },
+    {
+        "geo_label_citystate":"San Diego, CA",
+        "date_label":2012,
+        "Average_General_Score":0.3101428317
+    },
+    {
+        "geo_label_citystate":"San Diego, CA",
+        "date_label":2013,
+        "Average_General_Score":0.3115085942
+    },
+    {
+        "geo_label_citystate":"San Diego, CA",
+        "date_label":2014,
+        "Average_General_Score":0.3114532793
+    },
+    {
+        "geo_label_citystate":"San Diego, CA",
+        "date_label":2015,
+        "Average_General_Score":0.3079593235
+    },
+    {
+        "geo_label_citystate":"San Diego, CA",
+        "date_label":2016,
+        "Average_General_Score":0.309896879
+    },
+    {
+        "geo_label_citystate":"San Diego, CA",
+        "date_label":2017,
+        "Average_General_Score":0.3088397524
+    },
+    {
+        "geo_label_citystate":"San Diego, CA",
+        "date_label":2018,
+        "Average_General_Score":0.3037221908
+    },
+    {
+        "geo_label_citystate":"San Diego, CA",
+        "date_label":2019,
+        "Average_General_Score":0.307237763
+    },
+    {
+        "geo_label_citystate":"San Diego, CA",
+        "date_label":2020,
+        "Average_General_Score":0.3077127048
+    },
+    {
+        "geo_label_citystate":"San Diego, CA",
+        "date_label":2021,
+        "Average_General_Score":0.3060367989
+    },
+    {
+        "geo_label_citystate":"San Diego, CA",
+        "date_label":2022,
+        "Average_General_Score":0.3066025674
+    },
+    {
+        "geo_label_citystate":"San Francisco, CA",
+        "date_label":2010,
+        "Average_General_Score":0.3374633088
+    },
+    {
+        "geo_label_citystate":"San Francisco, CA",
+        "date_label":2011,
+        "Average_General_Score":0.3374336745
+    },
+    {
+        "geo_label_citystate":"San Francisco, CA",
+        "date_label":2012,
+        "Average_General_Score":0.3362153488
+    },
+    {
+        "geo_label_citystate":"San Francisco, CA",
+        "date_label":2013,
+        "Average_General_Score":0.3460102126
+    },
+    {
+        "geo_label_citystate":"San Francisco, CA",
+        "date_label":2014,
+        "Average_General_Score":0.3461614684
+    },
+    {
+        "geo_label_citystate":"San Francisco, CA",
+        "date_label":2015,
+        "Average_General_Score":0.3416904305
+    },
+    {
+        "geo_label_citystate":"San Francisco, CA",
+        "date_label":2016,
+        "Average_General_Score":0.3426069275
+    },
+    {
+        "geo_label_citystate":"San Francisco, CA",
+        "date_label":2017,
+        "Average_General_Score":0.3415719907
+    },
+    {
+        "geo_label_citystate":"San Francisco, CA",
+        "date_label":2018,
+        "Average_General_Score":0.3497844039
+    },
+    {
+        "geo_label_citystate":"San Francisco, CA",
+        "date_label":2019,
+        "Average_General_Score":0.3458585836
+    },
+    {
+        "geo_label_citystate":"San Francisco, CA",
+        "date_label":2020,
+        "Average_General_Score":0.3438252852
+    },
+    {
+        "geo_label_citystate":"San Francisco, CA",
+        "date_label":2021,
+        "Average_General_Score":0.3443919444
+    },
+    {
+        "geo_label_citystate":"San Francisco, CA",
+        "date_label":2022,
+        "Average_General_Score":0.345209108
+    },
+    {
+        "geo_label_citystate":"San Jose, CA",
+        "date_label":2010,
+        "Average_General_Score":0.2900752278
+    },
+    {
+        "geo_label_citystate":"San Jose, CA",
+        "date_label":2011,
+        "Average_General_Score":0.2889439494
+    },
+    {
+        "geo_label_citystate":"San Jose, CA",
+        "date_label":2012,
+        "Average_General_Score":0.2879125021
+    },
+    {
+        "geo_label_citystate":"San Jose, CA",
+        "date_label":2013,
+        "Average_General_Score":0.2834872419
+    },
+    {
+        "geo_label_citystate":"San Jose, CA",
+        "date_label":2014,
+        "Average_General_Score":0.2832970154
+    },
+    {
+        "geo_label_citystate":"San Jose, CA",
+        "date_label":2015,
+        "Average_General_Score":0.2807919311
+    },
+    {
+        "geo_label_citystate":"San Jose, CA",
+        "date_label":2016,
+        "Average_General_Score":0.2799542673
+    },
+    {
+        "geo_label_citystate":"San Jose, CA",
+        "date_label":2017,
+        "Average_General_Score":0.2760363917
+    },
+    {
+        "geo_label_citystate":"San Jose, CA",
+        "date_label":2018,
+        "Average_General_Score":0.2835136982
+    },
+    {
+        "geo_label_citystate":"San Jose, CA",
+        "date_label":2019,
+        "Average_General_Score":0.2859865438
+    },
+    {
+        "geo_label_citystate":"San Jose, CA",
+        "date_label":2020,
+        "Average_General_Score":0.2868909908
+    },
+    {
+        "geo_label_citystate":"San Jose, CA",
+        "date_label":2021,
+        "Average_General_Score":0.2835923758
+    },
+    {
+        "geo_label_citystate":"San Jose, CA",
+        "date_label":2022,
+        "Average_General_Score":0.2832281008
+    },
+    {
+        "geo_label_citystate":"Seattle, WA",
+        "date_label":2010,
+        "Average_General_Score":0.2873209174
+    },
+    {
+        "geo_label_citystate":"Seattle, WA",
+        "date_label":2011,
+        "Average_General_Score":0.2871192886
+    },
+    {
+        "geo_label_citystate":"Seattle, WA",
+        "date_label":2012,
+        "Average_General_Score":0.2858029034
+    },
+    {
+        "geo_label_citystate":"Seattle, WA",
+        "date_label":2013,
+        "Average_General_Score":0.2950487152
+    },
+    {
+        "geo_label_citystate":"Seattle, WA",
+        "date_label":2014,
+        "Average_General_Score":0.2941327008
+    },
+    {
+        "geo_label_citystate":"Seattle, WA",
+        "date_label":2015,
+        "Average_General_Score":0.2928534702
+    },
+    {
+        "geo_label_citystate":"Seattle, WA",
+        "date_label":2016,
+        "Average_General_Score":0.2906176042
+    },
+    {
+        "geo_label_citystate":"Seattle, WA",
+        "date_label":2017,
+        "Average_General_Score":0.2865723036
+    },
+    {
+        "geo_label_citystate":"Seattle, WA",
+        "date_label":2018,
+        "Average_General_Score":0.2867900257
+    },
+    {
+        "geo_label_citystate":"Seattle, WA",
+        "date_label":2019,
+        "Average_General_Score":0.2882853333
+    },
+    {
+        "geo_label_citystate":"Seattle, WA",
+        "date_label":2020,
+        "Average_General_Score":0.2885689
+    },
+    {
+        "geo_label_citystate":"Seattle, WA",
+        "date_label":2021,
+        "Average_General_Score":0.2882074833
+    },
+    {
+        "geo_label_citystate":"Seattle, WA",
+        "date_label":2022,
+        "Average_General_Score":0.2882680212
+    },
+    {
+        "geo_label_citystate":"Tucson, AZ",
+        "date_label":2010,
+        "Average_General_Score":0.2910202208
+    },
+    {
+        "geo_label_citystate":"Tucson, AZ",
+        "date_label":2011,
+        "Average_General_Score":0.2906536054
+    },
+    {
+        "geo_label_citystate":"Tucson, AZ",
+        "date_label":2012,
+        "Average_General_Score":0.2881613424
+    },
+    {
+        "geo_label_citystate":"Tucson, AZ",
+        "date_label":2013,
+        "Average_General_Score":0.3054447885
+    },
+    {
+        "geo_label_citystate":"Tucson, AZ",
+        "date_label":2014,
+        "Average_General_Score":0.3058728745
+    },
+    {
+        "geo_label_citystate":"Tucson, AZ",
+        "date_label":2015,
+        "Average_General_Score":0.3114068264
+    },
+    {
+        "geo_label_citystate":"Tucson, AZ",
+        "date_label":2016,
+        "Average_General_Score":0.3118742621
+    },
+    {
+        "geo_label_citystate":"Tucson, AZ",
+        "date_label":2017,
+        "Average_General_Score":0.3147333204
+    },
+    {
+        "geo_label_citystate":"Tucson, AZ",
+        "date_label":2018,
+        "Average_General_Score":0.3047184361
+    },
+    {
+        "geo_label_citystate":"Tucson, AZ",
+        "date_label":2019,
+        "Average_General_Score":0.2985923007
+    },
+    {
+        "geo_label_citystate":"Tucson, AZ",
+        "date_label":2020,
+        "Average_General_Score":0.3002727016
+    },
+    {
+        "geo_label_citystate":"Tucson, AZ",
+        "date_label":2021,
+        "Average_General_Score":0.3012108345
+    },
+    {
+        "geo_label_citystate":"Tucson, AZ",
+        "date_label":2022,
+        "Average_General_Score":0.3021659407
+    },
+    {
+        "geo_label_citystate":"U.S. Total",
+        "date_label":2010,
+        "Average_General_Score":0.2896529266
+    },
+    {
+        "geo_label_citystate":"U.S. Total",
+        "date_label":2011,
+        "Average_General_Score":0.2891401892
+    },
+    {
+        "geo_label_citystate":"U.S. Total",
+        "date_label":2012,
+        "Average_General_Score":0.2878498766
+    },
+    {
+        "geo_label_citystate":"U.S. Total",
+        "date_label":2013,
+        "Average_General_Score":0.2871264626
+    },
+    {
+        "geo_label_citystate":"U.S. Total",
+        "date_label":2014,
+        "Average_General_Score":0.28669459
+    },
+    {
+        "geo_label_citystate":"U.S. Total",
+        "date_label":2015,
+        "Average_General_Score":0.2870491497
+    },
+    {
+        "geo_label_citystate":"U.S. Total",
+        "date_label":2016,
+        "Average_General_Score":0.2867149641
+    },
+    {
+        "geo_label_citystate":"U.S. Total",
+        "date_label":2017,
+        "Average_General_Score":0.2882396698
+    },
+    {
+        "geo_label_citystate":"U.S. Total",
+        "date_label":2018,
+        "Average_General_Score":0.2860673071
+    },
+    {
+        "geo_label_citystate":"U.S. Total",
+        "date_label":2019,
+        "Average_General_Score":0.2862118767
+    },
+    {
+        "geo_label_citystate":"U.S. Total",
+        "date_label":2020,
+        "Average_General_Score":0.2844955965
+    },
+    {
+        "geo_label_citystate":"U.S. Total",
+        "date_label":2021,
+        "Average_General_Score":0.2855034966
+    },
+    {
+        "geo_label_citystate":"U.S. Total",
+        "date_label":2022,
+        "Average_General_Score":0.28571847
+    },
+    {
+        "geo_label_citystate":"Washington, DC",
+        "date_label":2010,
+        "Average_General_Score":0.3811613349
+    },
+    {
+        "geo_label_citystate":"Washington, DC",
+        "date_label":2011,
+        "Average_General_Score":0.3806357417
+    },
+    {
+        "geo_label_citystate":"Washington, DC",
+        "date_label":2012,
+        "Average_General_Score":0.3768734718
+    },
+    {
+        "geo_label_citystate":"Washington, DC",
+        "date_label":2013,
+        "Average_General_Score":0.3839953922
+    },
+    {
+        "geo_label_citystate":"Washington, DC",
+        "date_label":2014,
+        "Average_General_Score":0.381906087
+    },
+    {
+        "geo_label_citystate":"Washington, DC",
+        "date_label":2015,
+        "Average_General_Score":0.3810758858
+    },
+    {
+        "geo_label_citystate":"Washington, DC",
+        "date_label":2016,
+        "Average_General_Score":0.3792870122
+    },
+    {
+        "geo_label_citystate":"Washington, DC",
+        "date_label":2017,
+        "Average_General_Score":0.3834175031
+    },
+    {
+        "geo_label_citystate":"Washington, DC",
+        "date_label":2018,
+        "Average_General_Score":0.3634373355
+    },
+    {
+        "geo_label_citystate":"Washington, DC",
+        "date_label":2019,
+        "Average_General_Score":0.3630502969
+    },
+    {
+        "geo_label_citystate":"Washington, DC",
+        "date_label":2020,
+        "Average_General_Score":0.3607308162
+    },
+    {
+        "geo_label_citystate":"Washington, DC",
+        "date_label":2021,
+        "Average_General_Score":0.3591962295
+    },
+    {
+        "geo_label_citystate":"Washington, DC",
+        "date_label":2022,
+        "Average_General_Score":0.3597662677
+    }
+]
