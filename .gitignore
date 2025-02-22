@@ -6,6 +6,7 @@
 .pnp.js
 
 # Environment files
+/backend/config/serviceAccountKey
 .env
 .env.local
 .env.development.local
