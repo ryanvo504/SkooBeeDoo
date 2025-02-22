@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import MapPage from './components/MapPage'; // Adjust the import path as needed
 import './App.css';
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
     age: ''
   });
   const [errors, setErrors] = useState({});
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [currentPage, setCurrentPage] = useState('form');
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -45,38 +46,30 @@ function App() {
     if (validateForm()) {
       // Store user data in localStorage
       localStorage.setItem('userData', JSON.stringify(formData));
-      // Mark as submitted
-      setIsSubmitted(true);
+      // Navigate to map page
+      setCurrentPage('map');
     }
   };
 
-  // If already submitted, show main app
-  if (isSubmitted) {
-    return (
-      <div className="app-container">
-        <div className="form-card">
-          <div className="submitted-container">
-            <svg className="submitted-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <h1>Welcome Back!</h1>
-            <p>You can now access the main application features.</p>
-            <button 
-              className="reset-button"
-              onClick={() => {
-                localStorage.removeItem('userData');
-                setIsSubmitted(false);
-              }}
-            >
-              Reset User Data
-            </button>
-          </div>
-        </div>
-      </div>
-    );
+  // Check if user data exists on component mount
+  React.useEffect(() => {
+    const userData = localStorage.getItem('userData');
+    if (userData) {
+      setCurrentPage('map');
+    }
+  }, []);
+
+  // Reset function
+  const handleReset = () => {
+    localStorage.removeItem('userData');
+    setCurrentPage('form');
+  };
+
+  // Render the appropriate page based on current state
+  if (currentPage === 'map') {
+    return <MapPage onReset={handleReset} />;
   }
 
-  // Landing form
   return (
     <div className="app-container">
       <div className="form-card">
