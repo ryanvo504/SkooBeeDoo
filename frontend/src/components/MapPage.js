@@ -6,9 +6,9 @@ import L from 'leaflet';
 // Fix for default marker icon
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
-  iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
-  iconUrl: require('leaflet/dist/images/marker-icon.png'),
-  shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
+  iconRetinaUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png',
+  iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
+  shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
 });
 
 // Custom component to handle map clicks
@@ -42,10 +42,11 @@ function MapPage({ onReset }) {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
-          setCurrentLocation({
+          const location = {
             lat: position.coords.latitude,
             lng: position.coords.longitude
-          });
+          };
+          setCurrentLocation(location);
         },
         (error) => {
           console.error("Error getting location", error);
@@ -80,53 +81,56 @@ function MapPage({ onReset }) {
   }
 
   return (
-    <div className="min-h-screen">
-      <div className="absolute top-0 left-0 w-full p-4 bg-white shadow-md z-1000">
-        <h1 className="text-2xl font-bold">Livability Explorer</h1>
-        <p>Welcome, {userData.name}! Explore potential living areas.</p>
-      </div>
-      
-      <MapContainer 
-        center={currentLocation} 
-        zoom={13} 
-        style={{ height: '100vh', width: '100%' }}
-      >
-        <MapClickHandler onMapClick={handleMapClick} />
+    <div className="min-h-screen flex justify-center items-center bg-gray-100 p-4">
+      <div className="w-full max-w-4xl bg-white shadow-lg rounded-lg overflow-hidden">
+        <div className="p-4 bg-white shadow-md flex justify-between items-center">
+          <div>
+            <h1 className="text-2xl font-bold">Livability Explorer</h1>
+            <p>Welcome, {userData.name}! Explore potential living areas.</p>
+          </div>
+          <button 
+            onClick={onReset}
+            className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition"
+          >
+            Reset User Data
+          </button>
+        </div>
         
-        {/* Default map layer */}
-        <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        />
+        <div style={{ height: '600px', width: '100%' }}>
+          <MapContainer 
+            center={currentLocation} 
+            zoom={13} 
+            style={{ height: '100%', width: '100%' }}
+          >
+            <MapClickHandler onMapClick={handleMapClick} />
+            
+            {/* Default map layer */}
+            <TileLayer
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            />
 
-        {/* Current location marker */}
-        <Marker position={currentLocation}>
-          <Popup>Your Current Location</Popup>
-        </Marker>
+            {/* Current location marker */}
+            <Marker position={currentLocation}>
+              <Popup>Your Current Location</Popup>
+            </Marker>
 
-        {/* Dynamically added markers */}
-        {markers.map((marker, index) => (
-          <Marker key={index} position={marker}>
-            <Popup>
-              Marker {index + 1}
-              <button 
-                onClick={() => removeMarker(index)}
-                className="ml-2 bg-red-500 text-white px-2 py-1 rounded"
-              >
-                Remove
-              </button>
-            </Popup>
-          </Marker>
-        ))}
-      </MapContainer>
-
-      <div className="absolute bottom-0 left-0 w-full p-4 bg-white shadow-md z-1000">
-        <button 
-          onClick={onReset}
-          className="bg-red-500 text-white px-4 py-2 rounded"
-        >
-          Reset User Data
-        </button>
+            {/* Dynamically added markers */}
+            {markers.map((marker, index) => (
+              <Marker key={index} position={marker}>
+                <Popup>
+                  Marker {index + 1}
+                  <button 
+                    onClick={() => removeMarker(index)}
+                    className="ml-2 bg-red-500 text-white px-2 py-1 rounded"
+                  >
+                    Remove
+                  </button>
+                </Popup>
+              </Marker>
+            ))}
+          </MapContainer>
+        </div>
       </div>
     </div>
   );
