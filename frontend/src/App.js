@@ -74,7 +74,7 @@ function App() {
     <div className="app-container">
       <div className="form-card">
         <div className="form-header">
-          <h1>Livability Explorer</h1>
+          <h1>NextCity Navigator</h1>
           <p>Tell us about yourself</p>
         </div>
         <div className="form-body">

@@ -143,7 +143,7 @@ const createMarkerIcon = (isSelected) => {
         <div className="w-full max-w-4xl bg-white shadow-lg rounded-lg overflow-hidden">
           <div className="p-4 bg-white shadow-md flex justify-between items-center">
             <div>
-              <h1 className="text-2xl font-bold">Livability Explorer</h1>
+              <h1 className="text-2xl font-bold">NextCity Navigator</h1>
               <p>Welcome, {userData.name}! Explore potential living areas.</p>
             </div>
             <button 
