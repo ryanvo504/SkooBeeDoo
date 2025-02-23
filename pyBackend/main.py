@@ -3,8 +3,11 @@ from flask_cors import CORS
 import os
 import json
 import pandas as pd
-from livability_forecast_class import LivabilityForecast
 import groq
+
+# Import custom modules
+from forecast.livability_forecast_class import LivabilityForecast
+from score.generalscore import calculate_general_scores
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -20,18 +23,7 @@ CORS(app, resources={
     }
 })
 
-# Weights for city scoring
-WEIGHTS = {
-    'Housing': 0.2,
-    'Transportation': 0.15,
-    'Environment': 0.15,
-    'Health': 0.2,
-    'Neighborhood': 0.1,
-    'Engagement': 0.1,
-    'Opportunity': 0.1
-}
-
-# Load JSON data once when the app starts
+# Load JSON data
 def load_json_data():
     json_filepath = 'Data/categorized_data_0_1.json'
     try:
@@ -44,7 +36,6 @@ def load_json_data():
 CITY_DATA = load_json_data()
 
 # Initialize Groq
-groq_client = groq.Client(api_key=os.environ.get('GROQ_API_KEY'))
 
 @app.route('/api/city-data', methods=['GET'])
 def get_city_data():
@@ -52,27 +43,46 @@ def get_city_data():
         return jsonify({'error': 'City data not loaded'}), 500
     return jsonify(CITY_DATA)
 
+@app.route('/api/city-scores', methods=['POST'])
+def calculate_city_scores():
+    try:
+        # Get user weights from the request
+        user_weights = request.json.get('weights', {})
+        
+        # If no weights provided, use default weights
+        if not user_weights:
+            user_weights = {
+                'Housing': 0.2,
+                'Transportation': 0.15,
+                'Environment': 0.15,
+                'Health': 0.2,
+                'Neighborhood': 0.1,
+                'Engagement': 0.1,
+                'Opportunity': 0.1
+            }
+        
+        # Use the calculate_general_scores function from generalscore.py
+        city_scores = calculate_general_scores(user_weights)
+        
+        return jsonify(city_scores)
+
+    except Exception as error:
+        print(f'Error calculating city scores: {error}')
+        return jsonify({'error': 'Failed to calculate city scores'}), 500
+
+
 @app.route('/api/city-scores', methods=['GET'])
 def get_city_scores():
     try:
-        # If data is loaded from JSON
-        if CITY_DATA:
-            # Calculate scores based on existing data
-            city_scores = []
-            for entry in CITY_DATA:
-                general_score = sum(
-                    entry.get(category, 0) * weight 
-                    for category, weight in WEIGHTS.items()
-                )
-                city_scores.append({
-                    'geo_label_citystate': entry.get('geo_label_citystate', 'Unknown'),
-                    'date_label': entry.get('date_label', 'Unknown'),
-                    'Average_General_Score': general_score
-                })
-            
+        # Load pre-calculated scores from JSON
+        json_filepath = 'Data/categorized_data_0_1.json'
+        try:
+            with open(json_filepath, 'r') as f:
+                city_scores = json.load(f)
             return jsonify(city_scores)
-        
-        return jsonify({'error': 'No city data available'}), 404
+        except Exception as e:
+            print(f"Error loading scores: {e}")
+            return jsonify({'error': 'Failed to load city scores'}), 500
 
     except Exception as error:
         print(f'Error fetching city scores: {error}')
@@ -106,32 +116,7 @@ def get_city_forecast():
         print(f'Error fetching city forecasts: {error}')
         return jsonify({'error': 'Failed to fetch city forecasts'}), 500
 
-@app.route('/api/generate-city-explanations', methods=['POST'])
-def generate_city_explanations():
-    try:
-        # Get top cities from request
-        top_cities = request.json.get('top_cities', [])
-        
-        city_explanations = {}
-        for city, score in top_cities:
-            # Generate AI explanation using Groq
-            prompt = f"Explain why {city} is an excellent place to live based on its high livability score of {score}"
-            
-            response = groq_client.chat.completions.create(
-                model="mixtral-8x7b-32768",
-                messages=[
-                    {"role": "system", "content": "You are a helpful city living advisor."},
-                    {"role": "user", "content": prompt}
-                ]
-            )
-            
-            city_explanations[city] = response.choices[0].message.content
 
-        return jsonify(city_explanations)
-
-    except Exception as error:
-        print(f'Error generating city explanations: {error}')
-        return jsonify({'error': 'Failed to generate city explanations'}), 500
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
