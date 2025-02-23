@@ -7,11 +7,13 @@ Original file is located at
     https://colab.research.google.com/drive/1DqCHAaQPQbLiMl_dKSlKJ9oh7Igvwi34
 """
 
+!pip install llama-index-llms-groq
+!pip install llama-index
 from llama_index.llms.groq import Groq
 import json
 import pandas as pd
 
-file_path = "Data/general_scores_by_city_year.json"
+file_path = "general_scores_by_city_year.json"
 with open(file_path, "r") as file:
     data = json.load(file)
 
@@ -20,7 +22,12 @@ df_2022 = df[df["date_label"] == 2022]
 
 top_city = df_2022.nlargest(1, "Average_General_Score")[["geo_label_citystate", "Average_General_Score"]]["geo_label_citystate"]
 top_city = top_city.values[0]
-prompt_input = f"Evaluate {top_city} in terms of its social, economic, and health factors. In the first paragraph, dive into the city’s key strengths, including aspects like quality of life, economic opportunities, and public health initiatives, being specific and using cited statistics. In the second paragraph, discuss how these factors contribute to the city’s overall livability and well-being, including any notable policies or initiatives that support social equity, economic growth, and health outcomes. Keep the response balanced and specific with examples and statistics, noting both strengths and any areas for improvement where relevant."
+considerations = {"economic opportunity, healthcare access, social & cultural fit, environment & infrastructure"}
+
+prompt_input = f"""Using up to date data driven insights, dive into the {considerations} benefits of living in {top_city} for a Indian American male individual,
+Provide detailed statistical data and recent information on the factors listed above. Keep your response to three paragraphs at most,
+you do not need a introduction or concluding sentence.
+"""
 
 llm = Groq(model = "gemma2-9b-it", api_key= "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")
 response = llm.complete(prompt= prompt_input, temperature = .8, max_completion_tokens = 2048)
