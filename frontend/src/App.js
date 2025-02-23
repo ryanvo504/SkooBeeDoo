@@ -1,13 +1,23 @@
 import React, { useState } from 'react';
-import MapPage from './components/MapPage'; // Adjust the import path as needed
+import MapPage from './components/MapPage';
 import './App.css';
 
 function App() {
   const [formData, setFormData] = useState({
     name: '',
     gender: '',
-    ethnicity: ''
+    ethnicity: '',
+    weights: {
+      Housing: 0.2,
+      Transportation: 0.15,
+      Environment: 0.15,
+      Health: 0.2,
+      Neighborhood: 0.1,
+      Engagement: 0.1,
+      Opportunity: 0.1
+    }
   });
+  
   const [errors, setErrors] = useState({});
   const [currentPage, setCurrentPage] = useState('form');
 
@@ -26,6 +36,17 @@ function App() {
     }
   };
 
+  const handleWeightChange = (category, value) => {
+    const numValue = parseFloat(value) || 0;
+    setFormData(prev => ({
+      ...prev,
+      weights: {
+        ...prev.weights,
+        [category]: numValue
+      }
+    }));
+  };
+
   const validateForm = () => {
     const newErrors = {};
     if (!formData.name.trim()) {
@@ -37,6 +58,13 @@ function App() {
     if (!formData.ethnicity) {
       newErrors.ethnicity = 'Please select your ethnicity';
     }
+
+    // Validate weights sum to 1
+    const weightSum = Object.values(formData.weights).reduce((sum, weight) => sum + weight, 0);
+    if (Math.abs(weightSum - 1) > 0.01) {
+      newErrors.weights = `Category weights must sum to 1. Current sum: ${weightSum.toFixed(2)}`;
+    }
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -44,14 +72,11 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      // Store user data in localStorage
       localStorage.setItem('userData', JSON.stringify(formData));
-      // Navigate to map page
       setCurrentPage('map');
     }
   };
 
-  // Check if user data exists on component mount
   React.useEffect(() => {
     const userData = localStorage.getItem('userData');
     if (userData) {
@@ -59,13 +84,11 @@ function App() {
     }
   }, []);
 
-  // Reset function
   const handleReset = () => {
     localStorage.removeItem('userData');
     setCurrentPage('form');
   };
 
-  // Render the appropriate page based on current state
   if (currentPage === 'map') {
     return <MapPage onReset={handleReset} />;
   }
@@ -128,6 +151,28 @@ function App() {
                 <option value="other">Other</option>
               </select>
               {errors.ethnicity && <p className="error-message">{errors.ethnicity}</p>}
+            </div>
+
+            <div className="form-group">
+              <label className="form-label">Category Importance</label>
+              <p className="text-sm text-gray-600 mb-2">Adjust the weights below (must sum to 1)</p>
+              {Object.entries(formData.weights).map(([category, weight]) => (
+                <div key={category} className="mb-2">
+                  <label className="text-sm block">
+                    {category}
+                    <input
+                      type="number"
+                      step="0.05"
+                      min="0"
+                      max="1"
+                      value={weight}
+                      onChange={(e) => handleWeightChange(category, e.target.value)}
+                      className="form-input mt-1"
+                    />
+                  </label>
+                </div>
+              ))}
+              {errors.weights && <p className="error-message">{errors.weights}</p>}
             </div>
 
             <button 
