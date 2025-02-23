@@ -20,6 +20,9 @@ const MapPage = ({ onReset }) => {
   const [selectedYear, setSelectedYear] = useState('2022');
   const [forecastData, setForecastData] = useState({});
   const [isLoading, setIsLoading] = useState(false);
+  const [topCityAnalysis, setTopCityAnalysis] = useState('');
+  const [topCity, setTopCity] = useState('');
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
 
   useEffect(() => {
     const storedUserData = localStorage.getItem('userData');
@@ -149,6 +152,39 @@ const MapPage = ({ onReset }) => {
     setSelectedCity(cityName);
   };
 
+  const getTopCityAnalysis = async () => {
+    setIsAnalyzing(true);
+    try {
+      const response = await fetch("http://localhost:5001/api/analyze-top-city", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          cityScores: Object.entries(cityScores).map(([city, yearScores]) => ({
+            geo_label_citystate: city,
+            date_label: 2022,
+            Average_General_Score: yearScores[2022]
+          })),
+          userData: userData // This includes gender and ethnicity from localStorage
+        })
+      });
+      
+      const data = await response.json();
+      if (data.error) {
+        console.error('Error getting city analysis:', data.error);
+        return;
+      }
+      
+      setTopCityAnalysis(data.response);
+      setTopCity(data.top_city);
+    } catch (error) {
+      console.error('Error fetching top city analysis:', error);
+    } finally {
+      setIsAnalyzing(false);
+    }
+  };
+
   return (
     <div className="map-container">
       <div className="map-header">
@@ -156,6 +192,22 @@ const MapPage = ({ onReset }) => {
           <h1>NextCity Navigator</h1>
           <p>Welcome, {userData?.name}! Explore city livability scores.</p>
           <div className="preferences-summary">
+          <div className="top-city-analysis">
+            <button 
+              onClick={getTopCityAnalysis}
+              disabled={isAnalyzing}
+              className="analysis-button"
+            >
+              {isAnalyzing ? 'Analyzing Top City...' : 'Analyze Top City'}
+            </button>
+            
+            {topCityAnalysis && (
+              <div className="analysis-content">
+                <h4>Groq's livability assessment of {topCity}</h4>
+                <p>{topCityAnalysis}</p>
+              </div>
+            )}
+          </div>
             <p>Your Category Preferences:</p>
             <div className="preferences-grid">
               {userData?.weights && Object.entries(userData.weights).map(([category, weight]) => (
