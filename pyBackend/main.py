@@ -3,7 +3,8 @@ from flask_cors import CORS
 import os
 import json
 import pandas as pd
-import groq
+from groq import Groq
+
 
 # Import custom modules
 from forecast.livability_forecast_class import LivabilityForecast
@@ -36,6 +37,69 @@ def load_json_data():
 CITY_DATA = load_json_data()
 
 # Initialize Groq
+client = Groq(
+            api_key="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"
+        )
+@app.route('/api/analyze-top-city', methods=['POST'])
+def analyze_top_city():
+    try:
+        # Get the data from the request
+        data = request.json
+        city_scores = data.get('cityScores', [])
+        user_data = data.get('userData', {})
+        
+        # Get user demographics
+        gender = user_data.get('gender', '')
+        ethnicity = user_data.get('ethnicity', '')
+        
+        # Convert to DataFrame
+        df = pd.DataFrame(city_scores)
+        
+        # Filter for 2022 data
+        df_2022 = df[df["date_label"] == 2022]
+        
+        # Get the top city
+        top_city_series = df_2022.nlargest(1, "Average_General_Score")[["geo_label_citystate", "Average_General_Score"]]
+        top_city = top_city_series["geo_label_citystate"].iloc[0]
+        top_score = top_city_series["Average_General_Score"].iloc[0]
+        
+        considerations = {"economic opportunity, healthcare access, social & cultural fit, environment & infrastructure"}
+
+        # Create the prompt
+        prompt = f"""Using up to date data driven insights, dive into the {considerations} benefits of living in {top_city} for a {ethnicity} {gender}  individual,
+Provide detailed statistical data and recent information on the factors listed above. Keep your response to three paragraphs at most,
+you do not need a introduction or concluding sentence."""
+        
+        # Make the API call exactly as shown in documentation
+        chat_completion = client.chat.completions.create(
+            messages=[
+                {
+                    "role": "user",
+                    "content": prompt,
+                }
+            ],
+            model="gemma2-9b-it",
+        )
+        
+        # Extract the response
+        analysis = chat_completion.choices[0].message.content
+        
+        # Prepare response
+        response_data = {
+            "response": analysis,
+            "top_city": top_city
+        }
+        
+        # Save to file
+        with open("groq_response.json", "w") as f:
+            json.dump(response_data, f, indent=4)
+        
+        return jsonify(response_data)
+
+    except Exception as error:
+        print(f"Error in analyze_top_city: {error}")
+        return jsonify({'error': str(error)}), 500
+
 
 @app.route('/api/city-data', methods=['GET'])
 def get_city_data():

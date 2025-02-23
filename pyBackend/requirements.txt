@@ -4,3 +4,5 @@ pandas
 prophet
 groq
 gunicorn
+llama-index-llms-groq
+llama-index
