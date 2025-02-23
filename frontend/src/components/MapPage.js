@@ -18,6 +18,8 @@ const MapPage = ({ onReset }) => {
   const [selectedCity, setSelectedCity] = useState('');
   const [cityScores, setCityScores] = useState({});
   const [selectedYear, setSelectedYear] = useState('2022');
+  const [forecastData, setForecastData] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const storedUserData = localStorage.getItem('userData');
@@ -40,15 +42,11 @@ const MapPage = ({ onReset }) => {
         
         const data = await response.json();
         
-        // Process the data
         const scoresByCity = data.reduce((acc, item) => {
-          // Extract just the city name from "City, STATE"
           const cityName = item.geo_label_citystate.split(',')[0].trim();
           
-          // Skip the U.S. Total entry
           if (cityName === 'U.S. Total') return acc;
           
-          // Find the matching city name in our coordinates
           const matchingCity = Object.keys(CITY_COORDINATES).find(
             coordCity => coordCity.toLowerCase() === cityName.toLowerCase()
           );
@@ -70,12 +68,58 @@ const MapPage = ({ onReset }) => {
       }
     };
 
+    const fetchForecastData = async () => {
+      setIsLoading(true);
+      try {
+        const response = await fetch("http://localhost:5001/api/city-forecast");
+        const data = await response.json();
+        console.log('Raw forecast data received:', data);
+        
+        // Process the data to match city names exactly
+        const processedData = {};
+        Object.entries(data).forEach(([cityKey, cityData]) => {
+          const cityName = cityKey.split(',')[0].trim();
+          processedData[cityName] = cityData;
+        });
+        
+        console.log('Processed forecast data:', processedData);
+        setForecastData(processedData);
+      } catch (error) {
+        console.error('Error fetching forecast data:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
     fetchCityScores();
+    fetchForecastData();
   }, []);
 
+  // Helper function to get the score for a city and year
+  const getCityScore = (city, year) => {
+    const yearNum = Number(year);
+    
+    // For historical data (2022)
+    if (yearNum === 2022) {
+      return cityScores[city]?.[year] || null;
+    }
+    
+    // For forecast data (2023 onwards)
+    const forecast = forecastData[city];
+    if (forecast) {
+      const yearIndex = forecast.years.indexOf(yearNum);
+      if (yearIndex !== -1) {
+        console.log(`Found forecast for ${city} year ${year} at index ${yearIndex}:`, forecast.forecast[yearIndex]);
+        return forecast.forecast[yearIndex];
+      }
+    }
+    
+    return null;
+  };
+
   const createMarkerIcon = (cityName) => {
-    const cityData = cityScores[cityName];
-    const score = cityData ? cityData[selectedYear] : null;
+    const score = getCityScore(cityName, selectedYear);
+    console.log(`Creating marker for ${cityName}, year ${selectedYear}, score:`, score);
     
     let color = '#808080';
     if (score !== null) {
@@ -131,6 +175,11 @@ const MapPage = ({ onReset }) => {
             className="year-selector"
           >
             <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
           </select>
           
           <select
@@ -139,13 +188,14 @@ const MapPage = ({ onReset }) => {
             className="city-selector"
           >
             <option value="">Choose a City</option>
-            {Object.keys(CITY_COORDINATES).sort().map((city) => (
-              <option key={city} value={city}>
-                {city} {cityScores[city]?.[selectedYear] 
-                  ? ` (Score: ${cityScores[city][selectedYear].toFixed(2)})` 
-                  : ''}
-              </option>
-            ))}
+            {Object.keys(CITY_COORDINATES).sort().map((city) => {
+              const score = getCityScore(city, selectedYear);
+              return (
+                <option key={city} value={city}>
+                  {city} {score !== null ? ` (${selectedYear === '2022' ? 'Score' : 'Forecast'}: ${score.toFixed(2)})` : ''}
+                </option>
+              );
+            })}
           </select>
           
           <button onClick={onReset} className="reset-button">
@@ -155,31 +205,47 @@ const MapPage = ({ onReset }) => {
       </div>
 
       <div className="map-wrapper">
-        <MapContainer 
-          center={[39.8283, -98.5795]}
-          zoom={4}
-          minZoom={3}
-          maxZoom={10}
-          style={{ height: '600px', width: '100%' }}
-        >
-          <TileLayer
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          />
+        {isLoading && selectedYear >= 2023 ? (
+          <div className="loading-message">Loading forecast data for {selectedYear}...</div>
+        ) : (
+          <MapContainer 
+            center={[39.8283, -98.5795]}
+            zoom={4}
+            minZoom={3}
+            maxZoom={10}
+            style={{ height: '600px', width: '100%' }}
+          >
+            <TileLayer
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            />
 
-          {Object.entries(CITY_COORDINATES).map(([city, coords]) => (
-            <Marker
-              key={city}
-              position={[coords.lat, coords.lng]}
-              icon={createMarkerIcon(city)}
-            >
-              <Popup>
-                <div className="popup-content">
-                  <h3>{city}</h3>
-                  {cityScores[city]?.[selectedYear] ? (
-                    <>
-                      <p>Livability Score: {cityScores[city][selectedYear].toFixed(2)}</p>
-                      <p>Year: {selectedYear}</p>
+            {Object.entries(CITY_COORDINATES).map(([city, coords]) => {
+              const score = getCityScore(city, selectedYear);
+              const forecast = forecastData[city];
+              const yearNum = Number(selectedYear);
+              const yearIndex = forecast?.years.indexOf(yearNum) ?? -1;
+
+              return (
+                <Marker
+                  key={city}
+                  position={[coords.lat, coords.lng]}
+                  icon={createMarkerIcon(city)}
+                >
+                  <Popup>
+                    <div className="popup-content">
+                      <h3>{city}</h3>
+                      {score !== null ? (
+                        <>
+                          <p>{yearNum === 2022 ? 'Livability Score' : 'Forecasted Score'}: {score.toFixed(2)}</p>
+                          {yearNum > 2022 && forecast && yearIndex !== -1 && (
+                            <p>Forecast Range: {forecast.lower_bound[yearIndex].toFixed(2)} - {forecast.upper_bound[yearIndex].toFixed(2)}</p>
+                          )}
+                          <p>Year: {selectedYear}</p>
+                        </>
+                      ) : (
+                        <p>No data available for {selectedYear}</p>
+                      )}
                       <div className="popup-preferences">
                         <p>Your Preferences:</p>
                         <div className="popup-preferences-grid">
@@ -190,15 +256,13 @@ const MapPage = ({ onReset }) => {
                           ))}
                         </div>
                       </div>
-                    </>
-                  ) : (
-                    <p>No data available for {selectedYear}</p>
-                  )}
-                </div>
-              </Popup>
-            </Marker>
-          ))}
-        </MapContainer>
+                    </div>
+                  </Popup>
+                </Marker>
+              );
+            })}
+          </MapContainer>
+        )}
       </div>
     </div>
   );
