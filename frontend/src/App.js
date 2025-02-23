@@ -6,7 +6,7 @@ function App() {
   const [formData, setFormData] = useState({
     name: '',
     gender: '',
-    age: ''
+    ethnicity: ''
   });
   const [errors, setErrors] = useState({});
   const [currentPage, setCurrentPage] = useState('form');
@@ -34,8 +34,8 @@ function App() {
     if (!formData.gender) {
       newErrors.gender = 'Gender is required';
     }
-    if (!formData.age || formData.age < 18 || formData.age > 120) {
-      newErrors.age = 'Please enter a valid age between 18 and 120';
+    if (!formData.ethnicity) {
+      newErrors.ethnicity = 'Please select your ethnicity';
     }
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -111,19 +111,23 @@ function App() {
             </div>
 
             <div className="form-group">
-              <label htmlFor="age" className="form-label">Age</label>
-              <input
-                id="age"
-                name="age"
-                type="number"
-                value={formData.age}
+              <label htmlFor="ethnicity" className="form-label">Ethnicity</label>
+              <select
+                id="ethnicity"
+                name="ethnicity"
+                value={formData.ethnicity}
                 onChange={handleInputChange}
-                placeholder="Enter your age"
-                min="18"
-                max="120"
-                className={`form-input ${errors.age ? 'error' : ''}`}
-              />
-              {errors.age && <p className="error-message">{errors.age}</p>}
+                className={`form-input ${errors.ethnicity ? 'error' : ''}`}
+              >
+                <option value="">Select your ethnicity</option>
+                <option value="american-indian">American Indian</option>
+                <option value="asian-pacific-islander">Asian/Pacific Islander</option>
+                <option value="black">Black</option>
+                <option value="hispanic">Hispanic</option>
+                <option value="white">White</option>
+                <option value="other">Other</option>
+              </select>
+              {errors.ethnicity && <p className="error-message">{errors.ethnicity}</p>}
             </div>
 
             <button 

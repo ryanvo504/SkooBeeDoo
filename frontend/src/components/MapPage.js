@@ -19,31 +19,31 @@ const CITY_COORDINATES = {
   
   // Additional Cities
   'Austin': { lat: 30.2672, lng: -97.7431 },
-  'Jacksonville': { lat: 30.3322, lng: -81.6557 },
   'San Francisco': { lat: 37.7749, lng: -122.4194 },
   'Columbus': { lat: 39.9612, lng: -82.9988 },
-  'Fort Worth': { lat: 32.7555, lng: -97.3308 },
   'Indianapolis': { lat: 39.7684, lng: -86.1581 },
   'Charlotte': { lat: 35.2271, lng: -80.8431 },
   'Seattle': { lat: 47.6062, lng: -122.3321 },
   'Denver': { lat: 39.7392, lng: -104.9903 },
-  'Washington D.C.': { lat: 38.9072, lng: -77.0369 },
   
   // More Cities
   'Boston': { lat: 42.3601, lng: -71.0589 },
   'El Paso': { lat: 31.7619, lng: -106.4850 },
   'Detroit': { lat: 42.3314, lng: -83.0458 },
-  'Nashville': { lat: 36.1627, lng: -86.7816 },
   'Portland': { lat: 45.5155, lng: -122.6789 },
-  'Memphis': { lat: 35.1495, lng: -90.0490 },
   'Oklahoma City': { lat: 35.4676, lng: -97.5164 },
   'Las Vegas': { lat: 36.1699, lng: -115.1398 },
   'Louisville': { lat: 38.2527, lng: -85.7585 },
   'Baltimore': { lat: 39.2904, lng: -76.6122 },
   'Milwaukee': { lat: 43.0389, lng: -87.9065 },
-  'Albuquerque': { lat: 35.0844, lng: -106.6504 },
   'Tucson': { lat: 32.2226, lng: -110.9747 },
-  'Fresno': { lat: 36.7378, lng: -119.7871 }
+  'Cleveland': { lat: 41.4993, lng: -81.6944},
+  'Kansas City': { lat: 39.0997, lng: -94.5786},
+  'Long Beach': { lat: 33.7701, lng: -118.1937},
+  'Memphis': { lat: 35.1495, lng: -90.0490},
+  'Minneapolis': { lat: 44.9778, lng: -93.2650},
+  'Oakland': { lat: 37.8044, lng: -122.2712},
+  
 };
 
 // Custom marker icons
@@ -73,16 +73,6 @@ const createMarkerIcon = (isSelected) => {
     shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
   });
   
-  // Custom component to handle map navigation
-  function MapNavigation({ center }) {
-    const map = useMapEvents({
-      'load': () => {
-        map.flyTo(center, 10);
-      }
-    });
-    return null;
-  }
-  
   function MapPage({ onReset }) {
     // Retrieve user data from localStorage
     const [userData, setUserData] = useState(null);
@@ -96,6 +86,16 @@ const createMarkerIcon = (isSelected) => {
     // State for selected city
     const [selectedCity, setSelectedCity] = useState('');
   
+    // Custom component to handle map navigation
+    function MapNavigation({ center }) {
+      const map = useMapEvents({
+        'load': () => {
+          map.flyTo(center, 6);
+        }
+      });
+      return null;
+    }
+  
     // Load user data on component mount
     useEffect(() => {
       const storedUserData = localStorage.getItem('userData');
@@ -103,8 +103,8 @@ const createMarkerIcon = (isSelected) => {
         setUserData(JSON.parse(storedUserData));
       }
   
-      // Default to New York City if no geolocation
-      setCurrentLocation({ lat: 40.7128, lng: -74.0060 });
+      // Default to geographical center of the US
+      setCurrentLocation({ lat: 39.8283, lng: -98.5795 });
     }, []);
   
     // Handle city selection
@@ -139,28 +139,28 @@ const createMarkerIcon = (isSelected) => {
     }
   
     return (
-      <div className="min-h-screen flex justify-center items-center bg-gray-100 p-4">
-        <div className="w-full max-w-4xl bg-white shadow-lg rounded-lg overflow-hidden">
-          <div className="p-4 bg-white shadow-md flex justify-between items-center">
-            <div>
-              <h1 className="text-2xl font-bold">Livability Explorer</h1>
-              <p>Welcome, {userData.name}! Explore potential living areas.</p>
-            </div>
-            <button 
-              onClick={onReset}
-              className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition"
-            >
-              Reset User Data
-            </button>
-          </div>
-  
-          <div className="p-4 bg-gray-100 flex items-center space-x-4">
-            <label htmlFor="city-select" className="font-medium">Select a City:</label>
+        <div className="map-container">
+    <div className="map-header">
+      <div className="map-header-content">
+        <h1>Livability Explorer</h1>
+        <p>Welcome, {userData.name}! Explore potential living areas.</p>
+      </div>
+      <div className="reset-button-container">
+        <button 
+          onClick={onReset}
+          className="reset-button"
+        >
+          Reset User Data
+        </button>
+      </div>
+    </div>
+      
+          <div className="city-selector">
+            <label htmlFor="city-select">Select a City:</label>
             <select
               id="city-select"
               value={selectedCity}
               onChange={(e) => handleCitySelect(e.target.value)}
-              className="form-input w-64"
             >
               <option value="">Choose a City</option>
               {Object.keys(CITY_COORDINATES).sort().map((city) => (
@@ -171,21 +171,24 @@ const createMarkerIcon = (isSelected) => {
             </select>
           </div>
           
-          <div style={{ height: '600px', width: '100%' }}>
+          <div className="p-2 bg-white">
+          <div style={{ height: '600px', width: '100%', border: '4px solid black', borderRadius: '8px', overflow: 'hidden' }}>
             {currentLocation && (
               <MapContainer 
-                center={currentLocation} 
+                center={[39.8283, -98.5795]} // Geographical center of the contiguous US
                 zoom={4} 
+                minZoom={3}
+                maxZoom={10}
                 style={{ height: '100%', width: '100%' }}
               >
-                <MapNavigation center={currentLocation} />
+                <MapNavigation center={[39.8283, -98.5795]} />
                 
                 {/* Default map layer */}
                 <TileLayer
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                   attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 />
-  
+
                 {/* Markers for all cities */}
                 {Object.entries(CITY_COORDINATES).map(([city, coords]) => (
                   <Marker
@@ -196,7 +199,7 @@ const createMarkerIcon = (isSelected) => {
                     <Popup>{city}</Popup>
                   </Marker>
                 ))}
-  
+
                 {/* Dynamically added user markers */}
                 {markers.map((marker, index) => (
                   <Marker key={index} position={marker}>
@@ -215,8 +218,8 @@ const createMarkerIcon = (isSelected) => {
             )}
           </div>
         </div>
-      </div>
-    );
+        </div>
+      );
   }
   
   export default MapPage;
