@@ -1,0 +1,175 @@
+{"ds":1672531200000,"yhat":0.5610991816,"yhat_lower":0.5576740213,"yhat_upper":0.5647150989,"geo_label_citystate":"Austin, TX"}
+{"ds":1704067200000,"yhat":0.5761701033,"yhat_lower":0.5646857888,"yhat_upper":0.5875361318,"geo_label_citystate":"Austin, TX"}
+{"ds":1735689600000,"yhat":0.5686275437,"yhat_lower":0.5462557856,"yhat_upper":0.5908165042,"geo_label_citystate":"Austin, TX"}
+{"ds":1767225600000,"yhat":0.5826209723,"yhat_lower":0.5443790576,"yhat_upper":0.6178023417,"geo_label_citystate":"Austin, TX"}
+{"ds":1798761600000,"yhat":0.5970498938,"yhat_lower":0.5456877948,"yhat_upper":0.6472527346,"geo_label_citystate":"Austin, TX"}
+{"ds":1672531200000,"yhat":0.5146326845,"yhat_lower":0.5144525796,"yhat_upper":0.5148008485,"geo_label_citystate":"Baltimore, MD"}
+{"ds":1704067200000,"yhat":0.5164353213,"yhat_lower":0.5158593996,"yhat_upper":0.5170139066,"geo_label_citystate":"Baltimore, MD"}
+{"ds":1735689600000,"yhat":0.5182361649,"yhat_lower":0.5170556323,"yhat_upper":0.5193329116,"geo_label_citystate":"Baltimore, MD"}
+{"ds":1767225600000,"yhat":0.5165205423,"yhat_lower":0.5147795132,"yhat_upper":0.5182208917,"geo_label_citystate":"Baltimore, MD"}
+{"ds":1798761600000,"yhat":0.5165415933,"yhat_lower":0.5140460115,"yhat_upper":0.5191324401,"geo_label_citystate":"Baltimore, MD"}
+{"ds":1672531200000,"yhat":0.6233369577,"yhat_lower":0.623262646,"yhat_upper":0.6234152705,"geo_label_citystate":"Boston, MA"}
+{"ds":1704067200000,"yhat":0.6253177191,"yhat_lower":0.6250680281,"yhat_upper":0.6255713857,"geo_label_citystate":"Boston, MA"}
+{"ds":1735689600000,"yhat":0.6272796796,"yhat_lower":0.6267982842,"yhat_upper":0.6277851576,"geo_label_citystate":"Boston, MA"}
+{"ds":1767225600000,"yhat":0.6253412918,"yhat_lower":0.6245215366,"yhat_upper":0.6261630234,"geo_label_citystate":"Boston, MA"}
+{"ds":1798761600000,"yhat":0.6254086286,"yhat_lower":0.6242138684,"yhat_upper":0.6265896826,"geo_label_citystate":"Boston, MA"}
+{"ds":1672531200000,"yhat":0.5718753558,"yhat_lower":0.5718522644,"yhat_upper":0.5718960749,"geo_label_citystate":"Charlotte, NC"}
+{"ds":1704067200000,"yhat":0.5719551786,"yhat_lower":0.5718790544,"yhat_upper":0.572028935,"geo_label_citystate":"Charlotte, NC"}
+{"ds":1735689600000,"yhat":0.5718627043,"yhat_lower":0.5717233777,"yhat_upper":0.5720084424,"geo_label_citystate":"Charlotte, NC"}
+{"ds":1767225600000,"yhat":0.5718011599,"yhat_lower":0.5715711483,"yhat_upper":0.5720461234,"geo_label_citystate":"Charlotte, NC"}
+{"ds":1798761600000,"yhat":0.5717564319,"yhat_lower":0.5714223587,"yhat_upper":0.5721093546,"geo_label_citystate":"Charlotte, NC"}
+{"ds":1672531200000,"yhat":0.5665744398,"yhat_lower":0.5665492819,"yhat_upper":0.5665989443,"geo_label_citystate":"Chicago, IL"}
+{"ds":1704067200000,"yhat":0.5676657229,"yhat_lower":0.5675823673,"yhat_upper":0.5677449806,"geo_label_citystate":"Chicago, IL"}
+{"ds":1735689600000,"yhat":0.568944297,"yhat_lower":0.5687719282,"yhat_upper":0.5690955179,"geo_label_citystate":"Chicago, IL"}
+{"ds":1767225600000,"yhat":0.5676063428,"yhat_lower":0.5673351705,"yhat_upper":0.5678450992,"geo_label_citystate":"Chicago, IL"}
+{"ds":1798761600000,"yhat":0.5673424541,"yhat_lower":0.5669602319,"yhat_upper":0.5676834257,"geo_label_citystate":"Chicago, IL"}
+{"ds":1672531200000,"yhat":0.4428915958,"yhat_lower":0.4428736401,"yhat_upper":0.4429135946,"geo_label_citystate":"Cleveland, OH"}
+{"ds":1704067200000,"yhat":0.4426961296,"yhat_lower":0.4426415805,"yhat_upper":0.442770478,"geo_label_citystate":"Cleveland, OH"}
+{"ds":1735689600000,"yhat":0.4412864458,"yhat_lower":0.4411678915,"yhat_upper":0.4414278499,"geo_label_citystate":"Cleveland, OH"}
+{"ds":1767225600000,"yhat":0.4421282261,"yhat_lower":0.4419342037,"yhat_upper":0.4423410693,"geo_label_citystate":"Cleveland, OH"}
+{"ds":1798761600000,"yhat":0.442552155,"yhat_lower":0.4422796452,"yhat_upper":0.4428539304,"geo_label_citystate":"Cleveland, OH"}
+{"ds":1672531200000,"yhat":0.5177761143,"yhat_lower":0.5168335894,"yhat_upper":0.5187592969,"geo_label_citystate":"Columbus, OH"}
+{"ds":1704067200000,"yhat":0.5154941567,"yhat_lower":0.5123641254,"yhat_upper":0.5187543327,"geo_label_citystate":"Columbus, OH"}
+{"ds":1735689600000,"yhat":0.5204169481,"yhat_lower":0.5142096696,"yhat_upper":0.5271524544,"geo_label_citystate":"Columbus, OH"}
+{"ds":1767225600000,"yhat":0.5172575315,"yhat_lower":0.5076421629,"yhat_upper":0.527511896,"geo_label_citystate":"Columbus, OH"}
+{"ds":1798761600000,"yhat":0.5144610665,"yhat_lower":0.5005199712,"yhat_upper":0.5300264924,"geo_label_citystate":"Columbus, OH"}
+{"ds":1672531200000,"yhat":0.5019222359,"yhat_lower":0.5007710336,"yhat_upper":0.5031745448,"geo_label_citystate":"Dallas, TX"}
+{"ds":1704067200000,"yhat":0.5216912675,"yhat_lower":0.5178416836,"yhat_upper":0.5260036227,"geo_label_citystate":"Dallas, TX"}
+{"ds":1735689600000,"yhat":0.5176974578,"yhat_lower":0.5101392132,"yhat_upper":0.5266831546,"geo_label_citystate":"Dallas, TX"}
+{"ds":1767225600000,"yhat":0.5210743904,"yhat_lower":0.5089556429,"yhat_upper":0.5351341756,"geo_label_citystate":"Dallas, TX"}
+{"ds":1798761600000,"yhat":0.5327269091,"yhat_lower":0.5152026722,"yhat_upper":0.5520068501,"geo_label_citystate":"Dallas, TX"}
+{"ds":1672531200000,"yhat":0.5910016987,"yhat_lower":0.5908638369,"yhat_upper":0.5911201838,"geo_label_citystate":"Denver, CO"}
+{"ds":1704067200000,"yhat":0.5938525471,"yhat_lower":0.5934238888,"yhat_upper":0.5942698619,"geo_label_citystate":"Denver, CO"}
+{"ds":1735689600000,"yhat":0.5928157116,"yhat_lower":0.5920111936,"yhat_upper":0.5936108851,"geo_label_citystate":"Denver, CO"}
+{"ds":1767225600000,"yhat":0.5886463667,"yhat_lower":0.5873654891,"yhat_upper":0.5898894814,"geo_label_citystate":"Denver, CO"}
+{"ds":1798761600000,"yhat":0.5878363946,"yhat_lower":0.5859901637,"yhat_upper":0.5896822391,"geo_label_citystate":"Denver, CO"}
+{"ds":1672531200000,"yhat":0.4386858683,"yhat_lower":0.4386616837,"yhat_upper":0.438711858,"geo_label_citystate":"Detroit, MI"}
+{"ds":1704067200000,"yhat":0.4385334789,"yhat_lower":0.4384560055,"yhat_upper":0.4386134661,"geo_label_citystate":"Detroit, MI"}
+{"ds":1735689600000,"yhat":0.4380005279,"yhat_lower":0.4378538631,"yhat_upper":0.4381546361,"geo_label_citystate":"Detroit, MI"}
+{"ds":1767225600000,"yhat":0.438252694,"yhat_lower":0.4380179265,"yhat_upper":0.4384948458,"geo_label_citystate":"Detroit, MI"}
+{"ds":1798761600000,"yhat":0.4383095504,"yhat_lower":0.4379834744,"yhat_upper":0.4386494773,"geo_label_citystate":"Detroit, MI"}
+{"ds":1672531200000,"yhat":0.491416526,"yhat_lower":0.491301095,"yhat_upper":0.491540746,"geo_label_citystate":"El Paso, TX"}
+{"ds":1704067200000,"yhat":0.4903543832,"yhat_lower":0.4899885013,"yhat_upper":0.4907442513,"geo_label_citystate":"El Paso, TX"}
+{"ds":1735689600000,"yhat":0.4885319651,"yhat_lower":0.4878001425,"yhat_upper":0.4893024456,"geo_label_citystate":"El Paso, TX"}
+{"ds":1767225600000,"yhat":0.4840908744,"yhat_lower":0.4829047814,"yhat_upper":0.4853273869,"geo_label_citystate":"El Paso, TX"}
+{"ds":1798761600000,"yhat":0.4814335918,"yhat_lower":0.4797280008,"yhat_upper":0.4831829656,"geo_label_citystate":"El Paso, TX"}
+{"ds":1672531200000,"yhat":0.4894287679,"yhat_lower":0.4893622756,"yhat_upper":0.4894959848,"geo_label_citystate":"Houston, TX"}
+{"ds":1704067200000,"yhat":0.4861942474,"yhat_lower":0.4859668662,"yhat_upper":0.4864177444,"geo_label_citystate":"Houston, TX"}
+{"ds":1735689600000,"yhat":0.4871504168,"yhat_lower":0.4867312247,"yhat_upper":0.4875745416,"geo_label_citystate":"Houston, TX"}
+{"ds":1767225600000,"yhat":0.4871847998,"yhat_lower":0.4865398234,"yhat_upper":0.4878729616,"geo_label_citystate":"Houston, TX"}
+{"ds":1798761600000,"yhat":0.4855919878,"yhat_lower":0.4846654156,"yhat_upper":0.4865768063,"geo_label_citystate":"Houston, TX"}
+{"ds":1672531200000,"yhat":0.4967033335,"yhat_lower":0.4966059982,"yhat_upper":0.4967964432,"geo_label_citystate":"Indianapolis, IN"}
+{"ds":1704067200000,"yhat":0.4951919965,"yhat_lower":0.4948856484,"yhat_upper":0.4954927106,"geo_label_citystate":"Indianapolis, IN"}
+{"ds":1735689600000,"yhat":0.4949503161,"yhat_lower":0.494338922,"yhat_upper":0.4955501734,"geo_label_citystate":"Indianapolis, IN"}
+{"ds":1767225600000,"yhat":0.495162491,"yhat_lower":0.4941784655,"yhat_upper":0.4961504607,"geo_label_citystate":"Indianapolis, IN"}
+{"ds":1798761600000,"yhat":0.49448977,"yhat_lower":0.4930271132,"yhat_upper":0.4959097831,"geo_label_citystate":"Indianapolis, IN"}
+{"ds":1672531200000,"yhat":0.4916566045,"yhat_lower":0.4911686229,"yhat_upper":0.4921440326,"geo_label_citystate":"Kansas City, MO"}
+{"ds":1704067200000,"yhat":0.4946631079,"yhat_lower":0.4930703201,"yhat_upper":0.496210544,"geo_label_citystate":"Kansas City, MO"}
+{"ds":1735689600000,"yhat":0.4918718278,"yhat_lower":0.4889660572,"yhat_upper":0.4949069931,"geo_label_citystate":"Kansas City, MO"}
+{"ds":1767225600000,"yhat":0.4961558335,"yhat_lower":0.4915052481,"yhat_upper":0.5007870092,"geo_label_citystate":"Kansas City, MO"}
+{"ds":1798761600000,"yhat":0.4996825256,"yhat_lower":0.4931185906,"yhat_upper":0.5061290045,"geo_label_citystate":"Kansas City, MO"}
+{"ds":1672531200000,"yhat":0.5295380802,"yhat_lower":0.5295380555,"yhat_upper":0.5295381033,"geo_label_citystate":"Las Vegas, NV"}
+{"ds":1704067200000,"yhat":0.5295595114,"yhat_lower":0.5295594302,"yhat_upper":0.5295595906,"geo_label_citystate":"Las Vegas, NV"}
+{"ds":1735689600000,"yhat":0.5295112432,"yhat_lower":0.5295110839,"yhat_upper":0.5295114101,"geo_label_citystate":"Las Vegas, NV"}
+{"ds":1767225600000,"yhat":0.5295309193,"yhat_lower":0.5295306657,"yhat_upper":0.5295311867,"geo_label_citystate":"Las Vegas, NV"}
+{"ds":1798761600000,"yhat":0.5294956184,"yhat_lower":0.5294952523,"yhat_upper":0.5294959904,"geo_label_citystate":"Las Vegas, NV"}
+{"ds":1672531200000,"yhat":0.5182230896,"yhat_lower":0.5172483025,"yhat_upper":0.5194146222,"geo_label_citystate":"Long Beach, CA"}
+{"ds":1704067200000,"yhat":0.5395891982,"yhat_lower":0.5362780206,"yhat_upper":0.5432416833,"geo_label_citystate":"Long Beach, CA"}
+{"ds":1735689600000,"yhat":0.499741521,"yhat_lower":0.4927939169,"yhat_upper":0.5068848054,"geo_label_citystate":"Long Beach, CA"}
+{"ds":1767225600000,"yhat":0.5332965274,"yhat_lower":0.5222090191,"yhat_upper":0.5438923837,"geo_label_citystate":"Long Beach, CA"}
+{"ds":1798761600000,"yhat":0.5607020744,"yhat_lower":0.545259577,"yhat_upper":0.5755650995,"geo_label_citystate":"Long Beach, CA"}
+{"ds":1672531200000,"yhat":0.4784011503,"yhat_lower":0.4770444547,"yhat_upper":0.4797778627,"geo_label_citystate":"Los Angeles, CA"}
+{"ds":1704067200000,"yhat":0.4639964223,"yhat_lower":0.4597477097,"yhat_upper":0.4683755502,"geo_label_citystate":"Los Angeles, CA"}
+{"ds":1735689600000,"yhat":0.4897336679,"yhat_lower":0.481513517,"yhat_upper":0.49834188,"geo_label_citystate":"Los Angeles, CA"}
+{"ds":1767225600000,"yhat":0.4759690174,"yhat_lower":0.4635563822,"yhat_upper":0.4890130681,"geo_label_citystate":"Los Angeles, CA"}
+{"ds":1798761600000,"yhat":0.4618951739,"yhat_lower":0.4432945079,"yhat_upper":0.4807320104,"geo_label_citystate":"Los Angeles, CA"}
+{"ds":1672531200000,"yhat":0.5140431458,"yhat_lower":0.514038449,"yhat_upper":0.5140476117,"geo_label_citystate":"Louisville, KY"}
+{"ds":1704067200000,"yhat":0.5139687115,"yhat_lower":0.5139541531,"yhat_upper":0.5139837065,"geo_label_citystate":"Louisville, KY"}
+{"ds":1735689600000,"yhat":0.5139947208,"yhat_lower":0.5139652958,"yhat_upper":0.5140240557,"geo_label_citystate":"Louisville, KY"}
+{"ds":1767225600000,"yhat":0.5139856076,"yhat_lower":0.5139389114,"yhat_upper":0.5140338351,"geo_label_citystate":"Louisville, KY"}
+{"ds":1798761600000,"yhat":0.5139561111,"yhat_lower":0.513889709,"yhat_upper":0.5140231273,"geo_label_citystate":"Louisville, KY"}
+{"ds":1672531200000,"yhat":0.4359836205,"yhat_lower":0.4359520287,"yhat_upper":0.4360123714,"geo_label_citystate":"Memphis, TN"}
+{"ds":1704067200000,"yhat":0.4357101349,"yhat_lower":0.4356158355,"yhat_upper":0.4358088422,"geo_label_citystate":"Memphis, TN"}
+{"ds":1735689600000,"yhat":0.4355435204,"yhat_lower":0.4353649792,"yhat_upper":0.4357283872,"geo_label_citystate":"Memphis, TN"}
+{"ds":1767225600000,"yhat":0.4350608252,"yhat_lower":0.4347627611,"yhat_upper":0.4353515606,"geo_label_citystate":"Memphis, TN"}
+{"ds":1798761600000,"yhat":0.4345948913,"yhat_lower":0.4341713523,"yhat_upper":0.4350164572,"geo_label_citystate":"Memphis, TN"}
+{"ds":1672531200000,"yhat":0.4787282648,"yhat_lower":0.4784947877,"yhat_upper":0.4789685963,"geo_label_citystate":"Milwaukee, WI"}
+{"ds":1704067200000,"yhat":0.4777140589,"yhat_lower":0.4769651871,"yhat_upper":0.4784945827,"geo_label_citystate":"Milwaukee, WI"}
+{"ds":1735689600000,"yhat":0.4769770322,"yhat_lower":0.4755829786,"yhat_upper":0.4785590238,"geo_label_citystate":"Milwaukee, WI"}
+{"ds":1767225600000,"yhat":0.4760723357,"yhat_lower":0.4738720725,"yhat_upper":0.4784970135,"geo_label_citystate":"Milwaukee, WI"}
+{"ds":1798761600000,"yhat":0.4752099549,"yhat_lower":0.4720031805,"yhat_upper":0.478683897,"geo_label_citystate":"Milwaukee, WI"}
+{"ds":1672531200000,"yhat":0.5724501613,"yhat_lower":0.5723941948,"yhat_upper":0.5725090126,"geo_label_citystate":"Minneapolis, MN"}
+{"ds":1704067200000,"yhat":0.5734920998,"yhat_lower":0.5733065798,"yhat_upper":0.5736953093,"geo_label_citystate":"Minneapolis, MN"}
+{"ds":1735689600000,"yhat":0.5724820034,"yhat_lower":0.5721157703,"yhat_upper":0.5728762241,"geo_label_citystate":"Minneapolis, MN"}
+{"ds":1767225600000,"yhat":0.5710759621,"yhat_lower":0.5705117644,"yhat_upper":0.5716788471,"geo_label_citystate":"Minneapolis, MN"}
+{"ds":1798761600000,"yhat":0.5708099699,"yhat_lower":0.5700142636,"yhat_upper":0.5716518373,"geo_label_citystate":"Minneapolis, MN"}
+{"ds":1672531200000,"yhat":0.6373482969,"yhat_lower":0.6373299171,"yhat_upper":0.6373667814,"geo_label_citystate":"New York City, NY"}
+{"ds":1704067200000,"yhat":0.6357627566,"yhat_lower":0.6357047238,"yhat_upper":0.6358204916,"geo_label_citystate":"New York City, NY"}
+{"ds":1735689600000,"yhat":0.6342905238,"yhat_lower":0.634175135,"yhat_upper":0.6344069929,"geo_label_citystate":"New York City, NY"}
+{"ds":1767225600000,"yhat":0.6344746834,"yhat_lower":0.6342943099,"yhat_upper":0.6346646228,"geo_label_citystate":"New York City, NY"}
+{"ds":1798761600000,"yhat":0.6338983063,"yhat_lower":0.6336371881,"yhat_upper":0.6341634164,"geo_label_citystate":"New York City, NY"}
+{"ds":1672531200000,"yhat":0.5810594984,"yhat_lower":0.5798230031,"yhat_upper":0.5823499142,"geo_label_citystate":"Oakland, CA"}
+{"ds":1704067200000,"yhat":0.5850741302,"yhat_lower":0.5812991001,"yhat_upper":0.5892442221,"geo_label_citystate":"Oakland, CA"}
+{"ds":1735689600000,"yhat":0.5999446188,"yhat_lower":0.5923288861,"yhat_upper":0.6083070187,"geo_label_citystate":"Oakland, CA"}
+{"ds":1767225600000,"yhat":0.579235526,"yhat_lower":0.5673068334,"yhat_upper":0.5923596463,"geo_label_citystate":"Oakland, CA"}
+{"ds":1798761600000,"yhat":0.5709376669,"yhat_lower":0.5549251919,"yhat_upper":0.5899756769,"geo_label_citystate":"Oakland, CA"}
+{"ds":1672531200000,"yhat":0.5023238714,"yhat_lower":0.5021076512,"yhat_upper":0.5025665908,"geo_label_citystate":"Oklahoma City, OK"}
+{"ds":1704067200000,"yhat":0.5038708019,"yhat_lower":0.5031784165,"yhat_upper":0.5046682187,"geo_label_citystate":"Oklahoma City, OK"}
+{"ds":1735689600000,"yhat":0.5189371442,"yhat_lower":0.5175376803,"yhat_upper":0.52045874,"geo_label_citystate":"Oklahoma City, OK"}
+{"ds":1767225600000,"yhat":0.5269703718,"yhat_lower":0.5246681646,"yhat_upper":0.5293970666,"geo_label_citystate":"Oklahoma City, OK"}
+{"ds":1798761600000,"yhat":0.5317649801,"yhat_lower":0.528337838,"yhat_upper":0.5352665718,"geo_label_citystate":"Oklahoma City, OK"}
+{"ds":1672531200000,"yhat":0.5384940072,"yhat_lower":0.5381477996,"yhat_upper":0.5388307445,"geo_label_citystate":"Philadelphia, PA"}
+{"ds":1704067200000,"yhat":0.542018017,"yhat_lower":0.5408107103,"yhat_upper":0.5431249667,"geo_label_citystate":"Philadelphia, PA"}
+{"ds":1735689600000,"yhat":0.5453402778,"yhat_lower":0.5431318303,"yhat_upper":0.5474853617,"geo_label_citystate":"Philadelphia, PA"}
+{"ds":1767225600000,"yhat":0.5401946206,"yhat_lower":0.5366806506,"yhat_upper":0.5436560246,"geo_label_citystate":"Philadelphia, PA"}
+{"ds":1798761600000,"yhat":0.5393747256,"yhat_lower":0.5344098511,"yhat_upper":0.5444786198,"geo_label_citystate":"Philadelphia, PA"}
+{"ds":1672531200000,"yhat":0.5756729576,"yhat_lower":0.5727976461,"yhat_upper":0.5781899038,"geo_label_citystate":"Phoenix, AZ"}
+{"ds":1704067200000,"yhat":0.5893745081,"yhat_lower":0.5807477299,"yhat_upper":0.5972780572,"geo_label_citystate":"Phoenix, AZ"}
+{"ds":1735689600000,"yhat":0.5954845626,"yhat_lower":0.5791374525,"yhat_upper":0.6109145441,"geo_label_citystate":"Phoenix, AZ"}
+{"ds":1767225600000,"yhat":0.6513751808,"yhat_lower":0.6265280842,"yhat_upper":0.6769342984,"geo_label_citystate":"Phoenix, AZ"}
+{"ds":1798761600000,"yhat":0.686146697,"yhat_lower":0.6506887682,"yhat_upper":0.7234623321,"geo_label_citystate":"Phoenix, AZ"}
+{"ds":1672531200000,"yhat":0.6077776392,"yhat_lower":0.6077179544,"yhat_upper":0.6078350825,"geo_label_citystate":"Portland, OR"}
+{"ds":1704067200000,"yhat":0.6063424434,"yhat_lower":0.6061501066,"yhat_upper":0.6065198092,"geo_label_citystate":"Portland, OR"}
+{"ds":1735689600000,"yhat":0.6019177249,"yhat_lower":0.6015173489,"yhat_upper":0.6022666165,"geo_label_citystate":"Portland, OR"}
+{"ds":1767225600000,"yhat":0.6036323081,"yhat_lower":0.6030031519,"yhat_upper":0.6041698378,"geo_label_citystate":"Portland, OR"}
+{"ds":1798761600000,"yhat":0.6038579883,"yhat_lower":0.6029672567,"yhat_upper":0.6046662884,"geo_label_citystate":"Portland, OR"}
+{"ds":1672531200000,"yhat":0.460717803,"yhat_lower":0.460526748,"yhat_upper":0.4609023794,"geo_label_citystate":"San Antonio, TX"}
+{"ds":1704067200000,"yhat":0.4584110997,"yhat_lower":0.4577724659,"yhat_upper":0.4590322183,"geo_label_citystate":"San Antonio, TX"}
+{"ds":1735689600000,"yhat":0.4538147173,"yhat_lower":0.4525850755,"yhat_upper":0.4550178256,"geo_label_citystate":"San Antonio, TX"}
+{"ds":1767225600000,"yhat":0.4480713829,"yhat_lower":0.4461097875,"yhat_upper":0.4500476361,"geo_label_citystate":"San Antonio, TX"}
+{"ds":1798761600000,"yhat":0.4440347312,"yhat_lower":0.4413516854,"yhat_upper":0.4468534901,"geo_label_citystate":"San Antonio, TX"}
+{"ds":1672531200000,"yhat":0.56448473,"yhat_lower":0.5641867293,"yhat_upper":0.5648190771,"geo_label_citystate":"San Diego, CA"}
+{"ds":1704067200000,"yhat":0.5605595538,"yhat_lower":0.5596025043,"yhat_upper":0.5616307085,"geo_label_citystate":"San Diego, CA"}
+{"ds":1735689600000,"yhat":0.5597214442,"yhat_lower":0.5578898396,"yhat_upper":0.5618200862,"geo_label_citystate":"San Diego, CA"}
+{"ds":1767225600000,"yhat":0.5596136222,"yhat_lower":0.5566779988,"yhat_upper":0.5629847163,"geo_label_citystate":"San Diego, CA"}
+{"ds":1798761600000,"yhat":0.5575821015,"yhat_lower":0.5536122844,"yhat_upper":0.5623006269,"geo_label_citystate":"San Diego, CA"}
+{"ds":1672531200000,"yhat":0.7091787248,"yhat_lower":0.7068623225,"yhat_upper":0.7112757622,"geo_label_citystate":"San Francisco, CA"}
+{"ds":1704067200000,"yhat":0.7376323975,"yhat_lower":0.7297672528,"yhat_upper":0.7441776403,"geo_label_citystate":"San Francisco, CA"}
+{"ds":1735689600000,"yhat":0.7565943481,"yhat_lower":0.7417166775,"yhat_upper":0.7690741026,"geo_label_citystate":"San Francisco, CA"}
+{"ds":1767225600000,"yhat":0.746854169,"yhat_lower":0.7232070838,"yhat_upper":0.7661188868,"geo_label_citystate":"San Francisco, CA"}
+{"ds":1798761600000,"yhat":0.7562075733,"yhat_lower":0.7219361554,"yhat_upper":0.7839191289,"geo_label_citystate":"San Francisco, CA"}
+{"ds":1672531200000,"yhat":0.6379661386,"yhat_lower":0.6377632314,"yhat_upper":0.6381269199,"geo_label_citystate":"San Jose, CA"}
+{"ds":1704067200000,"yhat":0.6365419359,"yhat_lower":0.6358820618,"yhat_upper":0.6370748071,"geo_label_citystate":"San Jose, CA"}
+{"ds":1735689600000,"yhat":0.6381458252,"yhat_lower":0.6368613009,"yhat_upper":0.6392561491,"geo_label_citystate":"San Jose, CA"}
+{"ds":1767225600000,"yhat":0.6261960848,"yhat_lower":0.6242073751,"yhat_upper":0.6279383196,"geo_label_citystate":"San Jose, CA"}
+{"ds":1798761600000,"yhat":0.6195909576,"yhat_lower":0.6167354546,"yhat_upper":0.6220394464,"geo_label_citystate":"San Jose, CA"}
+{"ds":1672531200000,"yhat":0.6718815627,"yhat_lower":0.6718815614,"yhat_upper":0.6718815641,"geo_label_citystate":"Seattle, WA"}
+{"ds":1704067200000,"yhat":0.6718769827,"yhat_lower":0.6718769805,"yhat_upper":0.6718769848,"geo_label_citystate":"Seattle, WA"}
+{"ds":1735689600000,"yhat":0.6718889926,"yhat_lower":0.6718889888,"yhat_upper":0.6718889965,"geo_label_citystate":"Seattle, WA"}
+{"ds":1767225600000,"yhat":0.671884789,"yhat_lower":0.6718847829,"yhat_upper":0.6718847948,"geo_label_citystate":"Seattle, WA"}
+{"ds":1798761600000,"yhat":0.6718892282,"yhat_lower":0.6718892199,"yhat_upper":0.6718892362,"geo_label_citystate":"Seattle, WA"}
+{"ds":1672531200000,"yhat":0.5157225405,"yhat_lower":0.5154533947,"yhat_upper":0.5160813283,"geo_label_citystate":"Tucson, AZ"}
+{"ds":1704067200000,"yhat":0.5175079882,"yhat_lower":0.516616546,"yhat_upper":0.5186055309,"geo_label_citystate":"Tucson, AZ"}
+{"ds":1735689600000,"yhat":0.5192645912,"yhat_lower":0.5175204134,"yhat_upper":0.5214069653,"geo_label_citystate":"Tucson, AZ"}
+{"ds":1767225600000,"yhat":0.5193456016,"yhat_lower":0.5165811128,"yhat_upper":0.5227352961,"geo_label_citystate":"Tucson, AZ"}
+{"ds":1798761600000,"yhat":0.5203828401,"yhat_lower":0.5161764832,"yhat_upper":0.5251757183,"geo_label_citystate":"Tucson, AZ"}
+{"ds":1672531200000,"yhat":0.5526761348,"yhat_lower":0.551637551,"yhat_upper":0.5537111392,"geo_label_citystate":"U.S. Total"}
+{"ds":1704067200000,"yhat":0.5695734301,"yhat_lower":0.5661395186,"yhat_upper":0.5726807168,"geo_label_citystate":"U.S. Total"}
+{"ds":1735689600000,"yhat":0.5511716293,"yhat_lower":0.5441161318,"yhat_upper":0.5572264893,"geo_label_citystate":"U.S. Total"}
+{"ds":1767225600000,"yhat":0.5506249481,"yhat_lower":0.5391183623,"yhat_upper":0.5603254525,"geo_label_citystate":"U.S. Total"}
+{"ds":1798761600000,"yhat":0.5588338266,"yhat_lower":0.5431475118,"yhat_upper":0.5725983397,"geo_label_citystate":"U.S. Total"}
+{"ds":1672531200000,"yhat":0.6429865855,"yhat_lower":0.6429610056,"yhat_upper":0.6430117043,"geo_label_citystate":"Washington, DC"}
+{"ds":1704067200000,"yhat":0.6399716174,"yhat_lower":0.6398839763,"yhat_upper":0.640051357,"geo_label_citystate":"Washington, DC"}
+{"ds":1735689600000,"yhat":0.6390127221,"yhat_lower":0.6388350833,"yhat_upper":0.6391697591,"geo_label_citystate":"Washington, DC"}
+{"ds":1767225600000,"yhat":0.6393433897,"yhat_lower":0.6390848879,"yhat_upper":0.6395860425,"geo_label_citystate":"Washington, DC"}
+{"ds":1798761600000,"yhat":0.637997279,"yhat_lower":0.637628741,"yhat_upper":0.6383314436,"geo_label_citystate":"Washington, DC"}
