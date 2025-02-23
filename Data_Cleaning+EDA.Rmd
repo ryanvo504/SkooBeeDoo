@@ -1,0 +1,254 @@
+```{r}
+library(naniar)
+library(dplyr)
+
+data <- read.csv("BigCitiesHealth.csv")
+
+codebook <- data %>% 
+  arrange(metric_item_label) %>% 
+  distinct(metric_item_label, metric_item_label_subtitle)
+
+data_pivoted <- read.csv("BigCitiesHealth_Pivoted.csv")
+
+imputed_data <- read.csv("imputed_data.csv") %>% 
+  select(1:121)
+
+
+
+vis_miss(imputed_data%>%
+  select(where(~ mean(is.na(.)) < 0.5)))
+
+scaled_data <- imputed_data %>%
+  select(where(is.numeric), -date_label) %>%
+  scale() %>%
+  as.data.frame()
+
+scaled_data <- imputed_data %>% 
+  select(1:4) %>% 
+  cbind(scaled_data) %>% 
+  select(where(~ !any(is.na(.))))
+
+scaled_numeric <- imputed_data %>%
+  select(where(is.numeric), -date_label) %>%
+  mutate(across(everything(), ~ (. - min(.)) / (max(.) - min(.))))
+
+scaled_numeric <- imputed_data %>% 
+  select(1:4) %>% 
+  cbind(scaled_numeric) %>% 
+  select(where(~ !any(is.na(.))))
+
+write.csv(scaled_numeric, file = "~/Desktop/Datathon/scaled_data_0_to_1.csv", row.names = FALSE)
+
+write.csv(codebook, file = "~/Desktop/Datathon/codebook.csv", row.names = FALSE)
+```
+
+
+```{r}
+grouped_data_scored <- read.csv("grouped_data_with_scores.csv") %>% 
+  rename("city" = geo_label_citystate, "year" = date_label, "race" = strata_race_label, "gender" = strata_sex_label)
+
+library(ggplot2)
+
+# Filter for San Francisco and calculate the average general score for each gender by year
+sf_gender <- grouped_data_scored %>%
+  filter(city == "San Francisco, CA" & race == "All") %>%
+  group_by(year, gender) %>%
+  summarize(avg_score = mean(General_Score, na.rm = TRUE), .groups = "drop")
+
+# Create a bar chart with a separate bar for each gender for each year
+ggplot(sf_gender, aes(x = factor(year), y = avg_score, fill = gender)) +
+  geom_bar(stat = "identity", position = position_dodge(width = 0.9)) +
+  labs(title = "General Scores Over Time for San Francisco",
+       x = "Year",
+       y = "Average General Score") +
+  theme_minimal()
+
+
+sf_race <- grouped_data_scored %>%
+  filter(city == "San Francisco, CA" & gender == "Both") %>%
+  group_by(year, race) %>%
+  summarize(avg_score = mean(General_Score, na.rm = TRUE), .groups = "drop")
+
+# Create a bar chart with a separate bar for each gender for each year
+ggplot(sf_race, aes(x = factor(year), y = avg_score, fill = race)) +
+  geom_bar(stat = "identity", position = position_dodge(width = 0.9)) +
+  labs(title = "General Scores Over Time for San Francisco",
+       x = "Year",
+       y = "Average General Score") +
+  theme_minimal()
+```
+
+```{r}
+library(forcats)
+library(purrr)
+
+# Filter for 2022 and for rows where gender is "Both", then reorder locations within each race
+race_location_scores <- grouped_data_scored %>%
+  filter(year == 2022, gender == "Both") %>%
+  group_by(race) %>%
+  mutate(city = fct_reorder(city, General_Score, .desc = TRUE)) %>%
+  ungroup()
+
+# Split the data by race into a list of data frames
+race_data_list <- split(race_location_scores, race_location_scores$race)
+
+# Create a list of plots, one for each race
+plots_list <- map(race_data_list, function(df) {
+  # Reorder locations within this race's data (lowest to highest score)
+  df <- df %>% mutate(location = fct_reorder(city, General_Score, .desc = FALSE))
+  race_name <- unique(df$race)
+  
+  ggplot(df, aes(x = location, y = General_Score)) +
+    geom_bar(stat = "identity", fill = "skyblue") +
+    labs(title = paste("General Scores by Location for", race_name, "in 2022 (Gender: Both)"),
+         x = "Location",
+         y = "General Score") +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))
+})
+
+# Display each plot individually (in RStudio, this will show separate plots in the Plot pane)
+for (plot in plots_list) {
+  print(plot)
+}
+```
+
+```{r}
+gender_location_scores <- grouped_data_scored %>%
+  filter(year == 2022, race == "All") %>%
+  group_by(gender) %>%
+  mutate(city = fct_reorder(city, General_Score, .desc = TRUE)) %>%
+  ungroup()
+
+# Split the data by race into a list of data frames
+gender_data_list <- split(gender_location_scores, gender_location_scores$gender)
+
+# Create a list of plots, one for each race
+plots_list <- map(gender_data_list, function(df) {
+  # Reorder locations within this race's data (lowest to highest score)
+  df <- df %>% mutate(location = fct_reorder(city, General_Score, .desc = FALSE))
+  gender_name <- unique(df$gender)
+  
+  ggplot(df, aes(x = location, y = General_Score)) +
+    geom_bar(stat = "identity", fill = "skyblue") +
+    labs(title = paste("General Scores by Location for", gender_name, "in 2022 (Race: All)"),
+         x = "Location",
+         y = "General Score") +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))
+})
+
+# Display each plot individually (in RStudio, this will show separate plots in the Plot pane)
+for (plot in plots_list) {
+  print(plot)
+}
+```
+
+```{r}
+growth_data <- grouped_data_scored %>%
+  arrange(city, year) %>%                      # Ensure data is ordered by state and year
+  group_by(city) %>%
+  filter(race == "All", gender == "Both") %>% 
+  mutate(growth_rate = (General_Score / lag(General_Score) - 1) * 100) %>%
+  ungroup()
+
+# Optionally, remove the first year for each state (as it has no previous year)
+growth_data <- growth_data %>% filter(!is.na(growth_rate))
+
+# Split the data by state so that we can generate one plot per state
+state_data_list <- split(growth_data, growth_data$city)
+
+# Create a list of plots—one for each state
+plots_list <- map(state_data_list, function(df) {
+  city_name <- unique(df$city)
+  ggplot(df, aes(x = factor(year), y = growth_rate)) +
+    geom_bar(stat = "identity", fill = "skyblue") +
+    labs(title = paste("Growth Rate of General Score for", city_name),
+         x = "Year",
+         y = "Growth Rate (%)") +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))
+})
+
+# Print each plot individually (in an interactive environment like RStudio, they will appear one after the other)
+for (p in plots_list) {
+  print(p)
+}
+```
+
+```{r}
+# Compute the growth rate for U.S. Total by race
+growth_data <- grouped_data_scored %>%
+  filter(city == "U.S. Total", gender == "Both") %>%       # Keep only U.S. Total rows
+  group_by(race) %>%                     # Group by race so calculations are done within each race
+  arrange(year) %>%                      # Order the rows by year within each race
+  mutate(growth_rate = (General_Score / lag(General_Score) - 1) * 100) %>%  # Calculate growth rate
+  ungroup()
+
+growth_data <- growth_data %>% filter(!is.na(growth_rate))
+
+# Split the data into a list of data frames (one per race)
+race_data_list <- split(growth_data, growth_data$race)
+
+# Create a list of plots—one for each race
+plots_list <- map(race_data_list, function(df) {
+  race_name <- unique(df$race)
+  ggplot(df, aes(x = factor(year), y = growth_rate)) +
+    geom_bar(stat = "identity", fill = "steelblue") +
+    labs(title = paste("Year-over-Year Growth Rate for", race_name, "in U.S. Total"),
+         x = "Year",
+         y = "Growth Rate (%)") +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))
+})
+
+# Display each plot individually
+for (plot in plots_list) {
+  print(plot)
+}
+```
+
+```{r}
+prediction_data <- read.csv("5_year_predictions.csv") %>% 
+  rename("year" = ds, "General_Score" = yhat, city = geo_label_citystate) %>% 
+  mutate(year = substring(year, 1, 4),
+         race = "All",
+         gender = "Both") %>% 
+  select(c(city, year, race, gender, General_Score))
+
+all_scores <- rbind(grouped_data_scored, prediction_data) %>% 
+  filter(race == "All", gender == "Both") %>% 
+  mutate(
+    period = if_else(year > 2022, "Prediction", "Real Value")
+  ) %>% 
+  arrange(city, year)
+
+all_scores %>% 
+  filter(city == "U.S. Total") %>% 
+  ggplot(aes(x = factor(year), y = General_Score, fill = period)) +
+    geom_bar(stat = "identity") +
+    scale_fill_manual(values = c("Real Value" = "steelblue", "Prediction" = "orange")) +
+    labs(title = "Prediction of General Score for Entire US",
+         x = "Year",
+         y = "General Score") +
+    theme_minimal()
+```
+
+```{r}
+growth_data_prediction <- all_scores %>%
+  filter(city == "U.S. Total") %>%       # Keep only U.S. Total rows                  
+  mutate(growth_rate = (General_Score / lag(General_Score) - 1) * 100) %>%  # Calculate growth rate
+  ungroup()
+
+growth_data_prediction <- growth_data_prediction %>% filter(!is.na(growth_rate))
+
+growth_data_prediction %>% 
+  ggplot(aes(x = factor(year), y = growth_rate, fill = period)) +
+    geom_bar(stat = "identity") +
+    scale_fill_manual(values = c("Real Value" = "steelblue", "Prediction" = "orange")) +
+    labs(title = "Growth Rate Predictions For US",
+         x = "Year",
+         y = "Growth Rate (%)") +
+    theme_minimal()
+```
+
