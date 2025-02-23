@@ -3,7 +3,8 @@ import json
 
 def categorize_and_save_to_json(input_file, output_file, year=2022):
     """
-    Categorizes the data from the input CSV file, filters by a specific year, and saves the result as a JSON file.
+    Categorizes the data from the input CSV file, applies transformations based on weights,
+    filters by a specific year, and saves the result as a JSON file.
 
     Parameters:
     - input_file (str): Path to the input CSV file.
@@ -16,31 +17,36 @@ def categorize_and_save_to_json(input_file, output_file, year=2022):
     # Filter the data to include only rows for the specified year
     data = data[data['date_label'] == year]
 
-    # Define category-subcategory mappings
+    # Define category-subcategory mappings with weights
     categories = {
-        'Housing': ['Vacant.Housing.Units', 'Single.Parent.Families', 'Owner.Occupied.Housing', 'Renters.vs..Owners', 'Housing.Lead.Risk'],
-        'Transportation': ['Drives.Alone.to.Work', 'Walking.to.Work', 'Riding.Bike.to.Work', 'Public.Transportation.Use', 'Lack.of.Car'],
-        'Environment': ['Climate.related..Disasters', 'Community.Social.Vulnerability.to.Climate.Disasters'],
-        'Health': ['Adult.Binge.Drinking', 'Adult.Mental.Distress', 'Adult.Obesity', 'Adult.Physical.Inactivity', 'Adult.Smoking',
+        'Housing': [['Vacant.Housing.Units', 'Single.Parent.Families', 'Owner.Occupied.Housing', 'Renters.vs..Owners', 'Housing.Lead.Risk'], [1, 1, 0, 1, 1]],
+        'Transportation': [['Drives.Alone.to.Work', 'Walking.to.Work', 'Riding.Bike.to.Work', 'Public.Transportation.Use', 'Lack.of.Car'], [1, 0, 0, 0, 0]],
+        'Environment': [['Climate.related..Disasters', 'Community.Social.Vulnerability.to.Climate.Disasters'], [1, 1]],
+        'Health': [['Adult.Binge.Drinking', 'Adult.Mental.Distress', 'Adult.Obesity', 'Adult.Physical.Inactivity', 'Adult.Smoking',
                    'All.Cancer.Deaths', 'Breast.Cancer.Deaths', 'Cardiovascular.Disease.Deaths', 'Colorectal.Cancer.Deaths', 
                    'Diabetes', 'Diabetes.Deaths', 'Drug.Overdose.Deaths', 'Flu.Vaccinations..Medicare', 'Gun.Deaths..Firearms.', 
                    'HIV.Related.Deaths', 'Heart.Disease.Deaths', 'High.Blood.Pressure', 'Homicides', 'Injury.Deaths', 
                    'Lung.Cancer.Deaths', 'Motor.Vehicle.Deaths', 'New.Tuberculosis.Cases', 'Pneumonia.or.Influenza.Deaths', 
-                   'Prostate.Cancer.Deaths', 'Suicide', 'Syphilis..Newborns', 'Teen.Births'],
-        'Neighborhood': ['Minority.Population', 'Service.Workers', 'Public.Assistance', 'Poverty.in.All.Ages', 
-                         'Poverty.in.Children', 'Poverty.and.Near.Poverty.in.All.Ages'],
-        'Engagement': ['Preschool.Enrollment', 'College.Graduates', 'Foreign.Born.Population'],
-        'Opportunity': ['Household.Income.Inequality', 'Households.with.Higher.Incomes', 'Income.Inequality', 
-                        'Per.capita.Household.Income', 'Unemployment']
+                   'Prostate.Cancer.Deaths', 'Suicide', 'Syphilis..Newborns', 'Teen.Births'], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]],
+        'Neighborhood': [['Minority.Population', 'Service.Workers', 'Public.Assistance', 'Poverty.in.All.Ages', 
+                         'Poverty.in.Children', 'Poverty.and.Near.Poverty.in.All.Ages'], [0, 0, 0, 1, 1, 1]],
+        'Engagement': [['Preschool.Enrollment', 'College.Graduates', 'Foreign.Born.Population'], [0, 0, 0]],
+        'Opportunity': [['Household.Income.Inequality', 'Households.with.Higher.Incomes', 'Income.Inequality', 
+                        'Per.capita.Household.Income', 'Unemployment'], [1, 0, 1, 0, 1]]
     }
 
     # Create a new DataFrame to store the averaged values
     new_data = pd.DataFrame()
 
     # Iterate over each category and calculate the mean of its subcategories
-    for category, subcategories in categories.items():
+    for category, (subcategories, weights) in categories.items():
         # Select the columns that belong to the current category
-        category_data = data[subcategories]
+        category_data = data[subcategories].copy()
+        
+        # Apply the transformation: if weight is 1, use 1 - original value
+        for i, weight in enumerate(weights):
+            if weight == 1:
+                category_data[subcategories[i]] = 1 - category_data[subcategories[i]]
         
         # Calculate the mean across the subcategories
         new_data[category] = category_data.mean(axis=1)

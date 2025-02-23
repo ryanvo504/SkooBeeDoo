@@ -37,7 +37,7 @@ grouped_data.rename(columns={'General_Score': 'Average_General_Score'}, inplace=
 json_data = grouped_data.to_json(orient='records', indent=4)
 
 # Save the JSON data to a file
-output_file_path = 'general_scores_by_city_year.json'
+output_file_path = 'Data/general_scores_by_city_year.json'
 with open(output_file_path, 'w') as json_file:
     json_file.write(json_data)
 
