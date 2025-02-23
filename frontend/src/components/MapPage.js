@@ -28,7 +28,7 @@ const MapPage = ({ onReset }) => {
 
     const fetchCityScores = async () => {
       try {
-        const response = await fetch(`http://localhost:5001/api/city-scores`);
+        const response = await fetch(`${FRONTEND_API_BASE_URL}/api/city-scores`);
         const data = await response.json();
         
         // Process the data
