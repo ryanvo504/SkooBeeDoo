@@ -9,17 +9,16 @@ sys.path.append(os.path.abspath(os.path.join(os.getcwd(), '..')))
 import utils
 
 def main():
-    # Get the data root and point to the JSON file from utils.
+    # Get the data root and CSV file path from utils.
     data_root = utils.get_data_root()
-    json_filepath = os.path.join(data_root, 'categorized_data_0_1.json')
+    csv_filepath = os.path.join(data_root, 'categorized_data_0_1.csv')
     
-    # Instantiate the forecast model using the JSON file.
-    forecast_obj = LivabilityForecast(json_filepath)
+    # Instantiate the forecast model using the CSV file.
+    forecast_obj = LivabilityForecast(csv_filepath)
     
     # Forecast for the next 5 years.
     forecasts = forecast_obj.forecast(periods=5)
-    
-    # ---------------- Original Visuals ----------------
+   
     # 1. Per-City Forecast Plots with confidence intervals.
     for city, fcst in forecasts.items():
         plt.figure(figsize=(10, 6))
@@ -61,7 +60,7 @@ def main():
     plt.savefig(os.path.join(data_root, 'forecast_final_year.png'))
     plt.show()
     
-    # ---------------- Additional Visuals ----------------
+
     # Get preprocessed data from the forecast object.
     df = forecast_obj.df.copy()
     
@@ -132,7 +131,7 @@ def main():
     # 8. Sensitivity Analysis for one demo city: vary each regressor by ±10%.
     demo_city = list(city_models.keys())[0]
     model, city_data = city_models[demo_city]
-    future_base = model.make_future_dataframe(periods=5, freq='AS')
+    future_base = model.make_future_dataframe(periods=5, freq='YS')
     base_vals = city_data.iloc[-1]
     for reg in regressors:
         future_base[reg] = base_vals[reg]
@@ -163,3 +162,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
