@@ -4,7 +4,6 @@ import cityScoresRouter from './routes/cityScores.js';
 import { connectDB } from './config/database.js';
 import cors from 'cors';
 
-dotenv.config({ path: './.env' }); // Explicitly load from backend directory
 
 
 const app = express();
@@ -15,7 +14,8 @@ app.use(cors({
     origin: ["http://localhost:5173",
             "http://localhost:3001",
             "http://localhost:3000",
-            "http://localhost:5001"], // Allow frontend URLs
+            "http://localhost:5001",
+            "http://nextcity.com"], // Allow frontend URLs
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
 }));
 
