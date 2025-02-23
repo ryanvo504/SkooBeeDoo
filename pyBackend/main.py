@@ -17,7 +17,7 @@ CORS(app, resources={
             "http://localhost:5173",
             "http://localhost:3001",
             "http://localhost:3000",
-            "http://localhost:5000",
+            "http://localhost:5001",
             "https://skoo-bee-doo.vercel.app"
         ]
     }
@@ -106,5 +106,5 @@ def get_city_forecast():
 
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))
+    port = int(os.environ.get('PORT', 5001))
     app.run(host='0.0.0.0', port=port)
