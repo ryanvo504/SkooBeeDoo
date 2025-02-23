@@ -1,0 +1,10 @@
+#define __TBB_VERSION_STRINGS(N) \
+#N": BUILD_HOST		Mac-1727908671858 (arm64)" ENDL \
+#N": BUILD_OS		macOS version 14.6.1" ENDL \
+#N": BUILD_KERNEL	Darwin Kernel Version 23.6.0: Mon Jul 29 21:13:03 PDT 2024; root:xnu-10063.141.2~1/RELEASE_ARM64_VMAPPLE" ENDL \
+#N": BUILD_CLANG	Apple clang version 15.0.0 (clang-1500.3.9.4)" ENDL \
+#N": BUILD_XCODE	Xcode 15.4" ENDL \
+#N": BUILD_TARGET	arm64 on cc15.0.0_os14.6.1" ENDL \
+#N": BUILD_COMMAND	clang++ -O2 -DUSE_PTHREAD -stdlib=libc++ -arch arm64 -mmacosx-version-min=11 -Wall -Wno-unknown-warning-option -Wno-deprecated-copy -DTBB_SUPPRESS_DEPRECATED_MESSAGES=1 -std=c++1y -I../tbb_2020.3/src -I../tbb_2020.3/src/rml/include -I../tbb_2020.3/include" ENDL \
+
+#define __TBB_DATETIME "Wed Oct 2 23:57:35 UTC 2024"

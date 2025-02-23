@@ -17,7 +17,7 @@ CORS(app, resources={
             "http://localhost:5173",
             "http://localhost:3001",
             "http://localhost:3000",
-            "http://localhost:5001",
+            "http://localhost:5000",
             "https://skoo-bee-doo.vercel.app"
         ]
     }
@@ -47,21 +47,9 @@ def get_city_data():
 def calculate_city_scores():
     try:
         # Get user weights from the request
-        user_weights = request.json.get('weights', {})
+        user_weights = request.json.get('weights', None)
         
-        # If no weights provided, use default weights
-        if not user_weights:
-            user_weights = {
-                'Housing': 0.2,
-                'Transportation': 0.15,
-                'Environment': 0.15,
-                'Health': 0.2,
-                'Neighborhood': 0.1,
-                'Engagement': 0.1,
-                'Opportunity': 0.1
-            }
-        
-        # Use the calculate_general_scores function from generalscore.py
+        # Use the calculate_general_scores function
         city_scores = calculate_general_scores(user_weights)
         
         return jsonify(city_scores)
@@ -69,7 +57,6 @@ def calculate_city_scores():
     except Exception as error:
         print(f'Error calculating city scores: {error}')
         return jsonify({'error': 'Failed to calculate city scores'}), 500
-
 
 @app.route('/api/city-scores', methods=['GET'])
 def get_city_scores():
