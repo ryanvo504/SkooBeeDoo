@@ -4,7 +4,6 @@ import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { CITY_COORDINATES } from '../utils/cityCoordinates';
 import './MapPage.css';
-import FRONTEND_API_BASE_URL from '../API_BASE_URL'
 
 // Fix Leaflet icon issues
 delete L.Icon.Default.prototype._getIconUrl;
@@ -28,7 +27,17 @@ const MapPage = ({ onReset }) => {
 
     const fetchCityScores = async () => {
       try {
-        const response = await fetch("https://skoobeedoo-production.up.railway.app/api/city-scores");
+        const storedUserData = localStorage.getItem('userData');
+        const userWeights = storedUserData ? JSON.parse(storedUserData).weights : null;
+
+        const response = await fetch("https://skoobeedoo-production.up.railway.app/api/city-scores", {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ weights: userWeights })
+        });
+        
         const data = await response.json();
         
         // Process the data
@@ -102,6 +111,17 @@ const MapPage = ({ onReset }) => {
         <div className="map-header-content">
           <h1>NextCity Navigator</h1>
           <p>Welcome, {userData?.name}! Explore city livability scores.</p>
+          <div className="preferences-summary">
+            <p>Your Category Preferences:</p>
+            <div className="preferences-grid">
+              {userData?.weights && Object.entries(userData.weights).map(([category, weight]) => (
+                <div key={category} className="preference-item">
+                  <span className="category">{category}:</span>
+                  <span className="weight">{(weight * 100).toFixed(0)}%</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
         
         <div className="controls-container">
@@ -160,6 +180,16 @@ const MapPage = ({ onReset }) => {
                     <>
                       <p>Livability Score: {cityScores[city][selectedYear].toFixed(2)}</p>
                       <p>Year: {selectedYear}</p>
+                      <div className="popup-preferences">
+                        <p>Your Preferences:</p>
+                        <div className="popup-preferences-grid">
+                          {userData?.weights && Object.entries(userData.weights).map(([category, weight]) => (
+                            <div key={category} className="popup-preference-item">
+                              {category}: {(weight * 100).toFixed(0)}%
+                            </div>
+                          ))}
+                        </div>
+                      </div>
                     </>
                   ) : (
                     <p>No data available for {selectedYear}</p>
