@@ -1,5 +1,6 @@
 import admin from 'firebase-admin';
 import dotenv from 'dotenv';
+import { readFileSync } from 'fs'; // Add this import at the top
 
 dotenv.config();
 
@@ -26,3 +27,4 @@ export async function connectDB() {
     }
     return db; // Return the existing Firestore instance
 }
+
