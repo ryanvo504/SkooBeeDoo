@@ -4,6 +4,7 @@ import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { CITY_COORDINATES } from '../utils/cityCoordinates';
 import './MapPage.css';
+import FRONTEND_API_BASE_URL from '../API_BASE_URL'
 
 // Fix Leaflet icon issues
 delete L.Icon.Default.prototype._getIconUrl;
@@ -27,7 +28,7 @@ const MapPage = ({ onReset }) => {
 
     const fetchCityScores = async () => {
       try {
-        const response = await fetch('http://localhost:5001/api/city-scores');
+        const response = await fetch(`http://localhost:5001/api/city-scores`);
         const data = await response.json();
         
         // Process the data
