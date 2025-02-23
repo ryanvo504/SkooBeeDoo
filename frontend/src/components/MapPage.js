@@ -20,27 +20,40 @@ const MapPage = ({ onReset }) => {
   const [selectedYear, setSelectedYear] = useState('2022');
 
   useEffect(() => {
-    // Load user data
     const storedUserData = localStorage.getItem('userData');
     if (storedUserData) {
       setUserData(JSON.parse(storedUserData));
     }
 
-    // Fetch city scores
     const fetchCityScores = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/city-scores');
+        const response = await fetch('http://localhost:5001/api/city-scores');
         const data = await response.json();
         
+        // Process the data
         const scoresByCity = data.reduce((acc, item) => {
-          const key = item.geo_label_citystate;
-          if (!acc[key]) {
-            acc[key] = {};
+          // Extract just the city name from "City, STATE"
+          const cityName = item.geo_label_citystate.split(',')[0].trim();
+          
+          // Skip the U.S. Total entry
+          if (cityName === 'U.S. Total') return acc;
+          
+          // Find the matching city name in our coordinates
+          const matchingCity = Object.keys(CITY_COORDINATES).find(
+            coordCity => coordCity.toLowerCase() === cityName.toLowerCase()
+          );
+          
+          if (matchingCity) {
+            if (!acc[matchingCity]) {
+              acc[matchingCity] = {};
+            }
+            acc[matchingCity][item.date_label] = item.Average_General_Score;
           }
-          acc[key][item.date_label] = item.Average_General_Score;
+          
           return acc;
         }, {});
-        
+
+        console.log('Processed city scores:', scoresByCity);
         setCityScores(scoresByCity);
       } catch (error) {
         console.error('Error fetching city scores:', error);
@@ -97,8 +110,6 @@ const MapPage = ({ onReset }) => {
             className="year-selector"
           >
             <option value="2022">2022</option>
-            <option value="2021">2021</option>
-            <option value="2020">2020</option>
           </select>
           
           <select
@@ -145,9 +156,12 @@ const MapPage = ({ onReset }) => {
                 <div className="popup-content">
                   <h3>{city}</h3>
                   {cityScores[city]?.[selectedYear] ? (
-                    <p>Livability Score: {cityScores[city][selectedYear].toFixed(2)}</p>
+                    <>
+                      <p>Livability Score: {cityScores[city][selectedYear].toFixed(2)}</p>
+                      <p>Year: {selectedYear}</p>
+                    </>
                   ) : (
-                    <p>No data available</p>
+                    <p>No data available for {selectedYear}</p>
                   )}
                 </div>
               </Popup>

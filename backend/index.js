@@ -14,7 +14,8 @@ const HOST = process.env.BACKEND_SERVER_HOST || "http://localhost"; // Default i
 app.use(cors({
     origin: ["http://localhost:5173",
             "http://localhost:3001",
-            "http://localhost:3000"], // Allow frontend URLs
+            "http://localhost:3000",
+            "http://localhost:5001"], // Allow frontend URLs
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
 }));
 
