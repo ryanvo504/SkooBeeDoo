@@ -94,11 +94,10 @@
   
   /* Map Wrapper */
   .map-wrapper {
-    border: 4px solid var(--primary-color);
-    border-radius: 1rem;
+    border: 4px solid black;
+    border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
   }
   
   .map-wrapper:hover {

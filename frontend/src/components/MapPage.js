@@ -69,8 +69,8 @@ const MapPage = ({ onReset }) => {
     
     let color = '#808080';
     if (score !== null) {
-      if (score >= 0.7) color = '#00ff00';
-      else if (score >= 0.4) color = '#ffff00';
+      if (score >= 0.64) color = '#00ff00';
+      else if (score >= 0.31) color = '#ffff00';
       else color = '#ff0000';
     }
 
@@ -99,7 +99,7 @@ const MapPage = ({ onReset }) => {
     <div className="map-container">
       <div className="map-header">
         <div className="map-header-content">
-          <h1>Livability Explorer</h1>
+          <h1>NextCity Navigator</h1>
           <p>Welcome, {userData?.name}! Explore city livability scores.</p>
         </div>
         
