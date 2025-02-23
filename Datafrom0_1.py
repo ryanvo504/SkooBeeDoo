@@ -1,16 +1,20 @@
 import pandas as pd
 import json
 
-def categorize_and_save_to_json(input_file, output_file):
+def categorize_and_save_to_json(input_file, output_file, year=2022):
     """
-    Categorizes the data from the input CSV file and saves the result as a JSON file.
+    Categorizes the data from the input CSV file, filters by a specific year, and saves the result as a JSON file.
 
     Parameters:
     - input_file (str): Path to the input CSV file.
     - output_file (str): Path to the output JSON file.
+    - year (int): The year to filter the data by. Default is 2022.
     """
     # Load the data
     data = pd.read_csv(input_file)
+
+    # Filter the data to include only rows for the specified year
+    data = data[data['date_label'] == year]
 
     # Define category-subcategory mappings
     categories = {
@@ -52,9 +56,9 @@ def categorize_and_save_to_json(input_file, output_file):
     with open(output_file, 'w') as json_file:
         json_file.write(json_data)
 
-    print(f"New categorized data saved to '{output_file}'")
+    print(f"New categorized data for year {year} saved to '{output_file}'")
 
 # Example usage
 input_file = 'Data/scaled_data_0_to_1.csv'
-output_file = 'Data/categorized_data_0_1.json'
-categorize_and_save_to_json(input_file, output_file)
+output_file = 'Data/categorized_data_0_1_2022.json'
+categorize_and_save_to_json(input_file, output_file, year=2022)
