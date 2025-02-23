@@ -15,7 +15,7 @@ app.use(cors({
             "http://localhost:3001",
             "http://localhost:3000",
             "http://localhost:5001",
-            "https://skoo-bee-doo.vercel.app/"], // Allow frontend URLs
+            "https://skoo-bee-doo.vercel.app"], // Allow frontend URLs
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
 }));
 
