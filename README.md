@@ -1,7 +1,7 @@
 # SkooBeeDoo
-# 📌 **Setup Guide**
-
-# Project Setup Instructions
+# 📌 **Deployment Link**
+- https://skoo-bee-doo.vercel.app/
+# Local Setup Instructions
 
 - **Install Dependencies**
 
