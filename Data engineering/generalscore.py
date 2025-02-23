@@ -1,20 +1,17 @@
 import pandas as pd
 import json
+from userinput import get_user_weights
 
 # Load the CSV file
 file_path = 'Data/categorized_data_0_1.csv'
 data = pd.read_csv(file_path)
 
-# Define weights for each category (you can adjust these weights based on importance)
-weights = {
-    'Housing': 0.2,
-    'Transportation': 0.15,
-    'Environment': 0.15,
-    'Health': 0.2,
-    'Neighborhood': 0.1,
-    'Engagement': 0.1,
-    'Opportunity': 0.1
-}
+
+
+# Call the function and store the weights
+weights = get_user_weights()
+
+
 
 # Calculate the general score for each row
 data['General_Score'] = (
@@ -29,7 +26,7 @@ data['General_Score'] = (
 
 # Group by city and year to get the average general score for each city in each year
 grouped_data = data.groupby(['geo_label_citystate', 'date_label'])['General_Score'].mean().reset_index()
-
+grouped_data['General_Score'] += 0.1
 # Rename columns for clarity
 grouped_data.rename(columns={'General_Score': 'Average_General_Score'}, inplace=True)
 
