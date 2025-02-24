@@ -35,7 +35,7 @@ const MapPage = ({ onReset }) => {
         const storedUserData = localStorage.getItem('userData');
         const userWeights = storedUserData ? JSON.parse(storedUserData).weights : null;
 
-        const response = await fetch("http://localhost:5001/api/city-scores", {
+        const response = await fetch("https://skoobeedoo-production.up.railway.app//api/city-scores", {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -74,7 +74,7 @@ const MapPage = ({ onReset }) => {
     const fetchForecastData = async () => {
       setIsLoading(true);
       try {
-        const response = await fetch("http://localhost:5001/api/city-forecast");
+        const response = await fetch("https://skoobeedoo-production.up.railway.app//api/city-forecast");
         const data = await response.json();
         console.log('Raw forecast data received:', data);
         
