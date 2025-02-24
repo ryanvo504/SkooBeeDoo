@@ -155,7 +155,7 @@ const MapPage = ({ onReset }) => {
   const getTopCityAnalysis = async () => {
     setIsAnalyzing(true);
     try {
-      const response = await fetch("http://localhost:5001/api/analyze-top-city", {
+      const response = await fetch("https://skoobeedoo-production.up.railway.app/api/analyze-top-city", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
