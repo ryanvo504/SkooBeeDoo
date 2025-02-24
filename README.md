@@ -3,7 +3,7 @@
 - https://skoo-bee-doo.vercel.app/
 
 # Known bugs
-- The function to forecast data in future years of cities uses a python model that utilizes too much resources for the free version of Railway to deploy. To resolve this issue, you can run the backend locally by following the instructions below, and the deployment link will call localhost:5000 to run the python model that is running on your local machine
+- The function to forecast data in future years of cities uses a python model that utilizes too much resources for the free version of Railway to deploy. To resolve this issue, you can run the backend locally by following the instructions below, and the deployment link will call localhost:5000 to run the python model that is running on your local machine when asked to forecast data in future years.
   
 # Local Setup Instructions
 
